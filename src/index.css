@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: violet;
+  height: 200em;
+  width: 100%;
 }
 
 code {
@@ -13,7 +16,7 @@ code {
 }
 
 .example {
-  position: fixed;
+  position: absolute;
   top: 0px;
   left: 300px;
   height: 100px;
@@ -23,10 +26,14 @@ code {
 }
 
 .wrapper {
-  height: 3000px;
+  display: flex;
+  width: 100%;
+  background-color: orange;
 }
 
 .grid-container {
   background-color: green;
   display: grid;
+  height: 3000px;
+  width: 100px;
 }

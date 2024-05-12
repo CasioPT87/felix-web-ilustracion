@@ -36,17 +36,11 @@ const App = () => {
   return (
     <div className="wrapper">
       {Object.keys(images).map((imageName, index) => {
-        console.log(images[imageName])
+        return <div className="example">hey</div>
         return (
           <img key={index} src={images[imageName]} alt={imageName} />
         );
       })}
-      <animated.div
-        className="example"
-        style={{ opacity: scrollYProgress.get() + 0.5 }}
-      >
-        {scrollYProgress}
-      </animated.div>
     </div>
   );
 };
