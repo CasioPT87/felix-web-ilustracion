@@ -10,6 +10,7 @@ import {
   useTrail,
   useSpringValue,
   useScroll,
+  useSprings
 } from "@react-spring/web";
 
 // import image from './static/informatica/190158.jpg'
@@ -36,6 +37,14 @@ const getStyle = (width: number, height: number): object => {
 
 const App = () => {
   const { scrollYProgress } = useScroll();
+  const [springs, api] = useSprings(
+    Object.keys(images).length,
+    () => ({
+      from: { y: 2000 },
+      to: { y: 0 },
+    }),
+    []
+  )
   const [imagesSpan, setImagesSpan]: any = useState({});
 
   const handleImageLoad = (path: string, event: any) => {
@@ -47,18 +56,26 @@ const App = () => {
     });
   };
 
+  const handleStart = () => {
+    api.start()
+  }
+
   return (
     <div className="wrapper">
+      <div onClick={handleStart}>vamonos!!</div>
       <div className="grid-container">
         {Object.keys(images).map((imageName, index) => {
           // return <div className="example">hey</div>
           return (
-            <div key={index} className="children" style={{ ...imagesSpan[imageName] }}>
+            <animated.div 
+              key={index}
+              className="children" style={{ ...imagesSpan[imageName], ...springs[index] }}
+            >
               <img
                 src={images[imageName]}
                 onLoad={(event) => handleImageLoad(imageName, event)}
               />
-            </div>
+            </animated.div>
           );
         })}
       </div>
