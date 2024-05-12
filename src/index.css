@@ -16,23 +16,23 @@ code {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  background-color: orange;
+  background-color: white; 
+  justify-content: center;
 }
 
 .grid-container {
   padding: 2em;
   display: grid;
-  width: 100%;
-  gap: 2em;
+  width: 70%;
+  gap: 1em;
   grid-template-columns: repeat(3, 1fr);
-  background-color: green;
+  /* background-color: ; */
 }
 
-.example {
-  height: 100px;
-  width: 100%;
-  background-color: red;
-  border-radius: 5px;
+.children {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
