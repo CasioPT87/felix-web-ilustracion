@@ -14,7 +14,6 @@ const App = () => {
       <a onClick={() => setLocation("/dos")}>Vamos a dos!!!</a>
       <Switch>
         <Route path="/uno" component={Una} />
-
         <Route path="/dos" component={Dos} />
 
         {/* Default route in a switch */}
