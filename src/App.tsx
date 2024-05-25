@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation, Switch, Route } from "wouter";
 import Una from './components/una'
 import Dos from './components/dos'
+import NavBottom from "./components/nav-bottom";
 import "./App.css";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         {/* Default route in a switch */}
         <Route>404: No such page!</Route>
       </Switch>
+      <NavBottom />
     </>
   );
 };
