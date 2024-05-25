@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import * as BABYLON from "babylonjs";
+import * as BABYLON from '@babylonjs/core/Legacy/legacy';
 import * as GUI from "babylonjs-gui";
+import '@babylonjs/loaders/OBJ';
 import "./nav-bottom.css";
 
 const NavBottom = () => {
@@ -108,6 +109,7 @@ const NavBottom = () => {
         "avion.obj",
         scene,
         function (meshes) {
+          console.log('que paisha', meshes)
           var airplane = meshes[0];
           airplane.scaling = new BABYLON.Vector3(0.08, 0.08, 0.08);
           airplane.position = new BABYLON.Vector3(-36, 0, -40);
