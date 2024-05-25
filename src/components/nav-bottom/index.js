@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import * as BABYLON from '@babylonjs/core/Legacy/legacy';
-import * as GUI from "babylonjs-gui";
 import '@babylonjs/loaders/OBJ';
 import "./nav-bottom.css";
 
@@ -19,6 +18,8 @@ const NavBottom = () => {
     var createScene = function () {
       var scene = new BABYLON.Scene(engine);
 
+      console.log({ scene })
+
       var camera = new BABYLON.ArcRotateCamera(
         "camera",
         0.0,
@@ -36,21 +37,6 @@ const NavBottom = () => {
 
       //Color del fondo
       scene.clearColor = new BABYLON.Color4(0.88, 0.85, 1, 1);
-      //scene.clearColor = new BABYLON.Color4(0.2, 0.2, 0.2, 1);
-      //scene.clearColor = new BABYLON.Color4(0.96, 0.93, 1, 1);
-
-      //Créditos
-      var advancedTexture = GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
-
-      var credits = new GUI.TextBlock();
-      credits.text = "Copyright: Agallas el Perro Cobarde";
-      credits.color = "white";
-      credits.fontSize = 12;
-      credits.width = "260px";
-      credits.height = "40px";
-      credits.horizontalAlignment = GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
-      credits.verticalAlignment = GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
-      advancedTexture.addControl(credits);
 
       // Ground
 
@@ -490,48 +476,7 @@ const NavBottom = () => {
 
       meshCurro.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
-          // Configurar tooltip con un plano y texto
-          var advancedTexture =
-            GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
-          var tooltip = new GUI.Rectangle();
-          tooltip.width = "150px";
-          tooltip.height = "50px";
-          tooltip.cornerRadius = 20;
-          tooltip.color = "white";
-          tooltip.background = "black";
-          tooltip.alpha = 0.7;
-          tooltip.thickness = 1;
-          tooltip.isVisible = false;
-
-          var textBlock = new GUI.TextBlock();
-          textBlock.text = "Información";
-          tooltip.addControl(textBlock);
-
-          advancedTexture.addControl(tooltip);
-
-          // Mostrar tooltip al pasar el ratón sobre el objeto
-          mesh.actionManager = new BABYLON.ActionManager(scene);
-          mesh.actionManager.registerAction(
-            new BABYLON.ExecuteCodeAction(
-              BABYLON.ActionManager.OnPointerOverTrigger,
-              function (evt) {
-                tooltip.linkWithMesh(mesh);
-                tooltip.isVisible = true;
-              }
-            )
-          );
-
-          // Ocultar tooltip al quitar el ratón del objeto
-          mesh.actionManager.registerAction(
-            new BABYLON.ExecuteCodeAction(
-              BABYLON.ActionManager.OnPointerOutTrigger,
-              function (evt) {
-                tooltip.isVisible = false;
-              }
-            )
-          );
-
-          // Hacer algo con el tercer objeto cargado
+             // Hacer algo con el tercer objeto cargado
           mesh.position = new BABYLON.Vector3(26, 1, 7);
           mesh.scaling = new BABYLON.Vector3(-0.06, 0.06, 0.06);
 
@@ -1154,6 +1099,8 @@ const NavBottom = () => {
     };
 
     var scene = createScene();
+
+    console.log({ otrascene: scene })
 
     // Ejecutar el render loop
     engine.runRenderLoop(function () {
