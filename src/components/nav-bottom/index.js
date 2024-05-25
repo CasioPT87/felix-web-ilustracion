@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import * as BABYLON from '@babylonjs/core/Legacy/legacy';
 import '@babylonjs/loaders/OBJ';
+import { useLocation } from "wouter";
 import "./nav-bottom.css";
 
 const NavBottom = () => {
 
   const [show, setShow] = useState(false)
+  const [location, setLocation] = useLocation()
 
   useEffect(() => {
     // Obtener el canvas
@@ -95,7 +97,6 @@ const NavBottom = () => {
         "avion.obj",
         scene,
         function (meshes) {
-          console.log('que paisha', meshes)
           var airplane = meshes[0];
           airplane.scaling = new BABYLON.Vector3(0.08, 0.08, 0.08);
           airplane.position = new BABYLON.Vector3(-36, 0, -40);
@@ -107,9 +108,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/3d_intro.jpg" alt="bio_intro">';
+                setLocation("/uno")
               }
             )
           );
@@ -356,10 +355,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/ilustracion.jpg" alt="ilustracion">';
-                // Mover la cámara para enfocar la esfera con transición suave
+                setLocation("/")
                 moveCameraSmoothly(
                   camera,
                   //disco.position,
@@ -413,10 +409,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/ejemploSeccionVideos.mp4" alt="Edicion">';
-                // Mover la cámara para enfocar la esfera con transición suave
+                setLocation("/")
                 moveCameraSmoothly(
                   camera,
                   //disco.position,
@@ -465,9 +458,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/contacto.jpg" alt="contacto">';
+                setLocation("/dos")
               }
             )
           );
@@ -510,9 +501,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/perfil.jpg" alt="perfil">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/perfil.jpg" alt="perfil">';
               }
             )
           );
@@ -559,9 +550,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/ilustracion.jpg" alt="ilustracion">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/ilustracion.jpg" alt="ilustracion">';
                 // Mover la cámara para enfocar la esfera con transición suave
                 moveCameraSmoothly(
                   camera,
@@ -615,9 +606,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/portada.jpg" alt="portada">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/portada.jpg" alt="portada">';
               }
             )
           );
@@ -711,9 +702,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/ejemploSeccionVideos.mp4" alt="edicion">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/ejemploSeccionVideos.mp4" alt="edicion">';
               }
             )
           );
@@ -753,9 +744,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/biologia.jpg" alt="biología">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/biologia.jpg" alt="biología">';
               }
             )
           );
@@ -798,9 +789,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/geo_intro.jpg" alt="geo_intro">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/geo_intro.jpg" alt="geo_intro">';
               }
             )
           );
@@ -843,9 +834,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/fisica_intro.jpg" alt="fisica_intro">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/fisica_intro.jpg" alt="fisica_intro">';
               }
             )
           );
@@ -889,9 +880,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/hist_intro.jpg" alt="hist_intro">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/hist_intro.jpg" alt="hist_intro">';
               }
             )
           );
@@ -934,9 +925,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/inf_intro.jpg" alt="inf_intro">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/inf_intro.jpg" alt="inf_intro">';
               }
             )
           );
@@ -980,9 +971,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/tecno_intro.jpg" alt="tecno_intro">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/tecno_intro.jpg" alt="tecno_intro">';
               }
             )
           );
@@ -1025,9 +1016,9 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                var upperDiv = document.getElementById("content");
-                upperDiv.innerHTML =
-                  '<img src="./images/otros_intro.jpg" alt="otros_intro">';
+                // var upperDiv = document.getElementById("content");
+                // upperDiv.innerHTML =
+                //   '<img src="./images/otros_intro.jpg" alt="otros_intro">';
               }
             )
           );
