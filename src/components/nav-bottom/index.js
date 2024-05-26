@@ -20,8 +20,6 @@ const NavBottom = () => {
     var createScene = function () {
       var scene = new BABYLON.Scene(engine);
 
-      console.log({ scene })
-
       var camera = new BABYLON.ArcRotateCamera(
         "camera",
         0.0,
@@ -1090,8 +1088,6 @@ const NavBottom = () => {
     };
 
     var scene = createScene();
-
-    console.log({ otrascene: scene })
 
     // Ejecutar el render loop
     engine.runRenderLoop(function () {
