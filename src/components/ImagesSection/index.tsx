@@ -1,37 +1,35 @@
 import React, { useState, useEffect } from "react";
-import "./dos.css";
+import "./styles.css";
 import { animated, useTrail } from "@react-spring/web";
-
-function importAll(r: any) {
-  let images = {} as any;
-  (r as any).keys().map((item: any) => {
-    images[item.replace("./", "")] = r(item);
-  });
-  return images;
-}
-
-const imagesObj = importAll(
-  (require as any).context(
-    "../../static/informatica",
-    false,
-    /\.(png|jpe?g|svg)$/
-  )
-);
+import { images } from '../../helper/imageLoader'
 
 const isHorizontal = (img: { width: number; height: number }): Boolean => {
   return (img.width / img.height) > 1.5;
 };
 
-const Dos = () => {
+const ImagesSection = ({ folderName }: { folderName: 'informatica'}) => {
 
   const [imageShapeMap, setImageShapeMap]: any = useState({});
-  const images: string[] = Object.values(imagesObj);
+  const [sectionImages, setSectionImages] = useState([]);
+  // const images: string[] = Object.values(imagesObj);
 
-  const trails = useTrail(images.length, {
+  const trails = useTrail(sectionImages.length, {
     from: { y: 2000 },
     to: { y: 0 },
     delay: 1000,
   });
+
+  useEffect(() => {
+    if (images[folderName]) {
+      const imagesToSet = Object.values(images[folderName]) as any
+      setSectionImages(imagesToSet);
+  } else {
+      console.error('Folder not found:', folderName);
+      setSectionImages([]);
+  }
+}, [folderName, images]);
+
+  if (!sectionImages.length) return null
 
   return (
     <div className="wrapper">
@@ -47,7 +45,7 @@ const Dos = () => {
                   [index]: isHorizontal(target),
                 }));
               }}
-              src={images[index]}
+              src={sectionImages[index]}
             />
           </animated.div>
         ))}
@@ -56,4 +54,4 @@ const Dos = () => {
   );
 };
 
-export default Dos;
+export default ImagesSection;

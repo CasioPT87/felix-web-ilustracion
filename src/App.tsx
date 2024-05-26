@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, Switch, Route } from "wouter";
 import Una from './components/una'
-import Dos from './components/dos'
+import ImagesSection from './components/ImagesSection'
 import NavBottom from "./components/nav-bottom";
 import "./App.css";
 
@@ -15,7 +15,9 @@ const App = () => {
       <a onClick={() => setLocation("/dos")}>Vamos a dos!!!</a>
       <Switch>
         <Route path="/uno" component={Una} />
-        <Route path="/dos" component={Dos} />
+        <Route path="/dos">
+          <ImagesSection folderName="informatica" />
+        </Route>
 
         {/* Default route in a switch */}
         <Route>404: No such page!</Route>
