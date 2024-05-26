@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, Switch, Route } from "wouter";
 import ImagesSection from "./components/ImagesSection";
+import VideosSection from "./components/VideosSection";
 import Home from "./components/Home";
 import NavBottom from "./components/nav-bottom";
 import "./App.css";
@@ -18,6 +19,7 @@ const App = () => {
       <div onClick={() => setLocation("/geologia")}>geologia</div>
       <div onClick={() => setLocation("/tecnologia")}>tecnologia</div>
       <div onClick={() => setLocation("/otros")}>otros</div>
+      <div onClick={() => setLocation("/videos")}>videos</div>
 
       <Switch>
         <Route path="/" component={Home}/>
@@ -42,7 +44,8 @@ const App = () => {
         <Route path="/tecnologia">
           <ImagesSection key='tecnologia' folderName="tecnologia" />
         </Route>
-
+        <Route path="/videos" component={VideosSection} />
+  
         {/* Default route in a switch */}
         <Route>Pagina no encontrada</Route>
       </Switch>
