@@ -2,16 +2,16 @@ import React, { useState, useEffect } from "react";
 import "./styles.css";
 import { animated, useTrail } from "@react-spring/web";
 import { images } from '../../helper/imageLoader'
+import { Section } from '../types'
 
 const isHorizontal = (img: { width: number; height: number }): Boolean => {
   return (img.width / img.height) > 1.5;
 };
 
-const ImagesSection = ({ folderName }: { folderName: 'informatica'}) => {
+const ImagesSection = ({ folderName }: { folderName: Section }) => {
 
   const [imageShapeMap, setImageShapeMap]: any = useState({});
   const [sectionImages, setSectionImages] = useState([]);
-  // const images: string[] = Object.values(imagesObj);
 
   const trails = useTrail(sectionImages.length, {
     from: { y: 2000 },
