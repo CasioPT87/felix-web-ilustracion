@@ -33,7 +33,6 @@ const ImagesSection = ({ folderName }: { folderName: Section }) => {
 
   return (
     <div className="wrapper">
-      <h2>Esto es la pagina dos</h2>
       <div className="grid-container">
         {trails.map((style, index) => (
           <animated.div key={index} className={`children ${imageShapeMap[index] ? "horizontal" : "vertical"}`} style={style}>

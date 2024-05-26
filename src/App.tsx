@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, Switch, Route } from "wouter";
 import ImagesSection from "./components/ImagesSection";
+import Home from "./components/Home";
 import NavBottom from "./components/nav-bottom";
 import "./App.css";
 
@@ -9,7 +10,7 @@ const App = () => {
 
   return (
     <>
-      <h1>hola que pasa comostamoooos</h1>
+      <div onClick={() => setLocation("/")}>Portada</div>
       <div onClick={() => setLocation("/informatica")}>informatica</div>
       <div onClick={() => setLocation("/biologia")}>biologia</div>
       <div onClick={() => setLocation("/fisicayquimica")}>fisicayquimica</div>
@@ -19,6 +20,7 @@ const App = () => {
       <div onClick={() => setLocation("/otros")}>otros</div>
 
       <Switch>
+        <Route path="/" component={Home}/>
         <Route path="/biologia">
           <ImagesSection key='biologia' folderName="biologia" />
         </Route>
@@ -42,7 +44,7 @@ const App = () => {
         </Route>
 
         {/* Default route in a switch */}
-        <Route>404: No such page!</Route>
+        <Route>Pagina no encontrada</Route>
       </Switch>
       <NavBottom />
     </>
