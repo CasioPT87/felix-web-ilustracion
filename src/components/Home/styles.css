@@ -10,36 +10,87 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  animation: fade 4s infinite;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
 }
 
 .photo:nth-child(1) {
-  animation-delay: 0s;
+  animation-name: fade1;
 }
 
 .photo:nth-child(2) {
-  animation-delay: 4s;
+  animation-name: fade2;
 }
 
 .photo:nth-child(3) {
-  animation-delay: 8s;
+  animation-name: fade3;
 }
 
 .photo:nth-child(4) {
-  animation-delay: 12s;
+  animation-name: fade4;
 }
 
 .photo:nth-child(5) {
-  animation-delay: 16s;
+  animation-name: fade5;
 }
 
 .photo:nth-child(6) {
-  animation-delay: 20s;
+  animation-name: fade6;
 }
 
-@keyframes fade {
-  0%   {opacity: 0}
-  25%  {opacity: 1}
-  75%  {opacity: 1}
-  100% {opacity: 1}
+@keyframes fade1 {
+  0%    {opacity: 0}
+  2.776666666666667% {opacity: 1}
+  13.883333333333335% {opacity: 1}
+  16.66% {opacity: 0}
 }
+ 
+  @keyframes fade2 {
+  16.66%    {opacity: 0}
+  19.436666666666667% {opacity: 1}
+  30.543333333333337% {opacity: 1}
+  33.32% {opacity: 0}
+}
+ 
+  @keyframes fade3 {
+  33.32%    {opacity: 0}
+  36.096666666666664% {opacity: 1}
+  47.20333333333333% {opacity: 1}
+  49.980000000000004% {opacity: 0}
+}
+ 
+  @keyframes fade4 {
+  49.980000000000004%    {opacity: 0}
+  52.75666666666667% {opacity: 1}
+  63.86333333333334% {opacity: 1}
+  66.64% {opacity: 0}
+}
+
+@keyframes fade5 {
+  66.64%    {opacity: 0}
+  69.41666666666667% {opacity: 1}
+  80.52333333333334% {opacity: 1}
+  83.3% {opacity: 0}
+}
+ 
+  @keyframes fade6 {
+  83.3%    {opacity: 0}
+  86.07666666666667% {opacity: 1}
+  97.18333333333334% {opacity: 1}
+  99.96% {opacity: 0}
+}
+
+/* const getFrames = (iteration) => {
+  const numImages = 6
+  const section = 100 / 6
+  return `
+  @keyframes fade${iteration + 1} {
+  ${iteration * section}%    {opacity: 0}
+  ${(iteration * section) + (section / 6)}% {opacity: 1}
+  ${(iteration * section) + (5 * (section / 6))}% {opacity: 1}
+  ${(iteration * section) + section}% {opacity: 0}
+}
+`
+}
+
+[0, 1, 2, 3, 4, 5].map(ejem).join(' ') */
