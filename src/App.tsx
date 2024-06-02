@@ -4,6 +4,7 @@ import ImagesSection from "./components/ImagesSection";
 import MainSection from "./components/MainSection";
 import VideosSection from "./components/VideosSection";
 import Home from "./components/Home";
+import Profile from "./components/Profile/index";
 import NavBottom from "./components/nav-bottom";
 import "./App.css";
 
@@ -24,45 +25,51 @@ const App = () => {
         <div onClick={() => setLocation("/geologia")}>geologia</div>
         <div onClick={() => setLocation("/tecnologia")}>tecnologia</div>
         <div onClick={() => setLocation("/otros")}>otros</div>
-        <div onClick={() => setLocation("/videos")}>videos</div>
+        <div onClick={() => setLocation("/videos/animacion3d")}>
+          videos de 4 min
+        </div>
       </div>
 
       <Switch>
+        
+        {/* Secciones Principales */}
         <Route path="/" component={Home} />
-        <Route path="/ilustraciones">
+        <Route path="/ilustracion">
           <MainSection key="ilustraciones" type="images" />
         </Route>
-        <Route path="/videos">
-          <MainSection key="ilustraciones" type="videos" />
+        <Route path="/video">
+          <MainSection key="videos" type="videos" />
         </Route>
-        <Route path="/biologia">
+        <Route path="/perfil" component={Profile} />
+
+        {/* Subsecciones */}
+        <Route path="/ilustracion/biologia">
           <ImagesSection key="biologia" folderName="biologia" />
         </Route>
-        <Route path="/informatica">
+        <Route path="/ilustracion/informatica">
           <ImagesSection key="informatica" folderName="informatica" />
         </Route>
-        <Route path="/fisicayquimica">
+        <Route path="/ilustracion/fisicayquimica">
           <ImagesSection key="fisicayquimica" folderName="fisicayquimica" />
         </Route>
-        <Route path="/geografiaehistoria">
+        <Route path="/ilustracion/geografiaehistoria">
           <ImagesSection
             key="geografiaehistoria"
             folderName="geografiaehistoria"
           />
         </Route>
-        <Route path="/geologia">
+        <Route path="/ilustracion/geologia">
           <ImagesSection key="geologia" folderName="geologia" />
         </Route>
-        <Route path="/otros">
+        <Route path="/ilustracion/otros">
           <ImagesSection key="otros" folderName="otros" />
         </Route>
-        <Route path="/tecnologia">
+        <Route path="/ilustracion/tecnologia">
           <ImagesSection key="tecnologia" folderName="tecnologia" />
         </Route>
-        <Route path="/lllll/3d" component={VideosSection} />
+        <Route path="/video/animacion3d" component={VideosSection} />
 
-        {/* Default route in a switch */}
-        <Route>Pagina no encontrada</Route>
+        <Route>Ops!! lo siento, no es una url valida para este sitio</Route>
       </Switch>
       <NavBottom />
     </>

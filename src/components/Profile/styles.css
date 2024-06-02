@@ -1,0 +1,21 @@
+.perfil-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* space between columns */
+}
+
+.perfil-column {
+    background-color: lightgray;
+    padding: 20px;
+    border: 1px solid #ccc;
+
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .perfil-container {
+        grid-template-columns: 1fr;
+    }
+}

@@ -3,6 +3,7 @@ import "./styles.css";
 import { images } from "../../helper/imageLoader";
 import { getSortedPaths } from "../../helper/utils";
 import { MainSection } from "../types";
+import gifPortada from '../../static/videos/videosportada.gif'
 
 const mainSectionImages = Object.values(images.ilustraciones) as any[];
 
@@ -19,13 +20,13 @@ const Section = ({ type }: { type: MainSection }): any => {
     );
   } else if (type === "videos") {
     return (
-      <div className="video-videos-container">
-        <video className="video-videos" controls preload="auto" autoPlay={true} >
-          <source src={`${process.env.PUBLIC_URL}/assets/videos/video_largo.mp4`} type="video/mp4" />
-          <p>Lo sentimos, tu navegador no soporta videos</p>
-        </video>
-      </div>
-    );
+      <div className="gif-container">
+      <img
+        src={gifPortada}
+        className="videoportada"
+      />
+  </div>
+    )
   }
   return null;
 };

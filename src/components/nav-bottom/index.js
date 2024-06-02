@@ -106,7 +106,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/videos/animacion3d") // esto es el video de 4 minutos
+                setLocation("/video/animacion3d") // esto es el video de 4 minutos
               }
             )
           );
@@ -643,7 +643,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/videos")
+                setLocation("/video")
                 // Mover la cámara para enfocar la esfera con transición suave
                 moveCameraSmoothly(
                   camera,
@@ -695,7 +695,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation('/videos/edicion') // no me los ha mandado aun
+                setLocation('/video/edicion') // no me los ha mandado aun
               }
             )
           );
