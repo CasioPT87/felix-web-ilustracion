@@ -5,7 +5,7 @@ import "./styles.css";
 
 const Profile = () => {
   return (
-    <div className="perfil-container">
+    <div className={`perfil-container `}>
       <div className="perfil-column">
         <img src={felix} />
       </div>

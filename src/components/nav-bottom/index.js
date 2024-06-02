@@ -4,7 +4,7 @@ import '@babylonjs/loaders/OBJ';
 import { useLocation } from "wouter";
 import "./nav-bottom.css";
 
-const NavBottom = () => {
+const NavBottom = ({ goTo }) => {
 
   const [show, setShow] = useState(false)
   const [location, setLocation] = useLocation()
@@ -106,7 +106,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/video/animacion3d") // esto es el video de 4 minutos
+                goTo("/video/animacion3d") // esto es el video de 4 minutos
               }
             )
           );
@@ -353,7 +353,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/")
+                goTo("/")
                 moveCameraSmoothly(
                   camera,
                   //disco.position,
@@ -407,7 +407,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/")
+                goTo("/")
                 moveCameraSmoothly(
                   camera,
                   //disco.position,
@@ -456,7 +456,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/contacto")
+                goTo("/contacto")
               }
             )
           );
@@ -499,7 +499,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/perfil")
+                goTo("/perfil")
               }
             )
           );
@@ -546,7 +546,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/ilustracion")
+                goTo("/ilustracion")
                 // Mover la cámara para enfocar la esfera con transición suave
                 moveCameraSmoothly(
                   camera,
@@ -600,7 +600,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/")
+                goTo("/")
               }
             )
           );
@@ -643,7 +643,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/video")
+                goTo("/video")
                 // Mover la cámara para enfocar la esfera con transición suave
                 moveCameraSmoothly(
                   camera,
@@ -695,7 +695,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation('/video/edicion') // no me los ha mandado aun
+                goTo('/video/edicion') // no me los ha mandado aun
               }
             )
           );
@@ -735,7 +735,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/ilustracion/biologia")
+                goTo("/ilustracion/biologia")
               }
             )
           );
@@ -778,7 +778,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/ilustracion/geologia")
+                goTo("/ilustracion/geologia")
               }
             )
           );
@@ -821,7 +821,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/ilustracion/fisicayquimica")
+                goTo("/ilustracion/fisicayquimica")
               }
             )
           );
@@ -865,7 +865,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/ilustracion/geografiaehistoria")
+                goTo("/ilustracion/geografiaehistoria")
               }
             )
           );
@@ -908,7 +908,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/ilustracion/informatica")
+                goTo("/ilustracion/informatica")
               }
             )
           );
@@ -952,7 +952,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/ilustracion/tecnologia")
+                goTo("/ilustracion/tecnologia")
               }
             )
           );
@@ -995,7 +995,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/ilustracion/otros")
+                goTo("/ilustracion/otros")
               }
             )
           );
