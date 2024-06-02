@@ -11,41 +11,48 @@ const App = () => {
 
   return (
     <>
-      <div onClick={() => setLocation("/")}>Portada</div>
-      <div onClick={() => setLocation("/informatica")}>informatica</div>
-      <div onClick={() => setLocation("/biologia")}>biologia</div>
-      <div onClick={() => setLocation("/fisicayquimica")}>fisicayquimica</div>
-      <div onClick={() => setLocation("/geografiaehistoria")}>geografiaehistoria</div>
-      <div onClick={() => setLocation("/geologia")}>geologia</div>
-      <div onClick={() => setLocation("/tecnologia")}>tecnologia</div>
-      <div onClick={() => setLocation("/otros")}>otros</div>
-      <div onClick={() => setLocation("/videos")}>videos</div>
+      <div className="bot-nav">
+        <div onClick={() => setLocation("/")}>Portada</div>
+        <div onClick={() => setLocation("/informatica")}>informatica</div>
+        <div onClick={() => setLocation("/biologia")}>biologia</div>
+        <div onClick={() => setLocation("/fisicayquimica")}>fisicayquimica</div>
+        <div onClick={() => setLocation("/geografiaehistoria")}>
+          geografiaehistoria
+        </div>
+        <div onClick={() => setLocation("/geologia")}>geologia</div>
+        <div onClick={() => setLocation("/tecnologia")}>tecnologia</div>
+        <div onClick={() => setLocation("/otros")}>otros</div>
+        <div onClick={() => setLocation("/videos")}>videos</div>
+      </div>
 
       <Switch>
-        <Route path="/" component={Home}/>
+        <Route path="/" component={Home} />
         <Route path="/biologia">
-          <ImagesSection key='biologia' folderName="biologia" />
+          <ImagesSection key="biologia" folderName="biologia" />
         </Route>
         <Route path="/informatica">
-          <ImagesSection key='informatica' folderName="informatica" />
+          <ImagesSection key="informatica" folderName="informatica" />
         </Route>
         <Route path="/fisicayquimica">
-          <ImagesSection key='fisicayquimica' folderName="fisicayquimica" />
+          <ImagesSection key="fisicayquimica" folderName="fisicayquimica" />
         </Route>
         <Route path="/geografiaehistoria">
-          <ImagesSection key='geografiaehistoria' folderName="geografiaehistoria" />
+          <ImagesSection
+            key="geografiaehistoria"
+            folderName="geografiaehistoria"
+          />
         </Route>
         <Route path="/geologia">
-          <ImagesSection key='geologia' folderName="geologia" />
+          <ImagesSection key="geologia" folderName="geologia" />
         </Route>
         <Route path="/otros">
-          <ImagesSection key='otros' folderName="otros" />
+          <ImagesSection key="otros" folderName="otros" />
         </Route>
         <Route path="/tecnologia">
-          <ImagesSection key='tecnologia' folderName="tecnologia" />
+          <ImagesSection key="tecnologia" folderName="tecnologia" />
         </Route>
         <Route path="/videos" component={VideosSection} />
-  
+
         {/* Default route in a switch */}
         <Route>Pagina no encontrada</Route>
       </Switch>

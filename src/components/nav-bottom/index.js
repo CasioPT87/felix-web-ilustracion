@@ -106,7 +106,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/uno")
+                setLocation("/videos/animacion3d") // esto es el video de 4 minutos
               }
             )
           );
@@ -456,7 +456,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                setLocation("/dos")
+                setLocation("/contacto")
               }
             )
           );
@@ -499,9 +499,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/perfil.jpg" alt="perfil">';
+                setLocation("/perfil")
               }
             )
           );
@@ -548,9 +546,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/ilustracion.jpg" alt="ilustracion">';
+                setLocation("/ilustracion")
                 // Mover la cámara para enfocar la esfera con transición suave
                 moveCameraSmoothly(
                   camera,
@@ -604,9 +600,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/portada.jpg" alt="portada">';
+                setLocation("/")
               }
             )
           );
@@ -649,6 +643,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
+                setLocation("/videos")
                 // Mover la cámara para enfocar la esfera con transición suave
                 moveCameraSmoothly(
                   camera,
@@ -700,9 +695,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/ejemploSeccionVideos.mp4" alt="edicion">';
+                setLocation('/videos/edicion') // no me los ha mandado aun
               }
             )
           );
@@ -742,9 +735,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/biologia.jpg" alt="biología">';
+                setLocation("/ilustracion/biologia")
               }
             )
           );
@@ -787,9 +778,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/geo_intro.jpg" alt="geo_intro">';
+                setLocation("/ilustracion/geologia")
               }
             )
           );
@@ -832,9 +821,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/fisica_intro.jpg" alt="fisica_intro">';
+                setLocation("/ilustracion/fisicayquimica")
               }
             )
           );
@@ -878,9 +865,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/hist_intro.jpg" alt="hist_intro">';
+                setLocation("/ilustracion/geografiaehistoria")
               }
             )
           );
@@ -923,9 +908,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/inf_intro.jpg" alt="inf_intro">';
+                setLocation("/ilustracion/informatica")
               }
             )
           );
@@ -969,9 +952,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/tecno_intro.jpg" alt="tecno_intro">';
+                setLocation("/ilustracion/tecnologia")
               }
             )
           );
@@ -1014,9 +995,7 @@ const NavBottom = () => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                // var upperDiv = document.getElementById("content");
-                // upperDiv.innerHTML =
-                //   '<img src="./images/otros_intro.jpg" alt="otros_intro">';
+                setLocation("/ilustracion/otros")
               }
             )
           );
