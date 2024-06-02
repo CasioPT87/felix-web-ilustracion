@@ -91,7 +91,7 @@ const NavBottom = () => {
       // Load the airplane model
       BABYLON.SceneLoader.ImportMesh(
         "",
-        "models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "avion.obj",
         scene,
         function (meshes) {
@@ -227,92 +227,92 @@ const NavBottom = () => {
       var meshVolver = assetsManager.addMeshTask(
         "volver",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "volver.obj"
       );
       var meshVolver2 = assetsManager.addMeshTask(
         "volver2",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "volver2.obj"
       );
 
       var meshMicro = assetsManager.addMeshTask(
         "microscopio",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "microscopio.obj"
       );
       var meshTelefono = assetsManager.addMeshTask(
         "telefono",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "telefono.obj"
       );
       var meshCurro = assetsManager.addMeshTask(
         "currando",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "currando.obj"
       );
       var meshCaba = assetsManager.addMeshTask(
         "caballete",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "caballete.obj"
       );
       var meshCaseta = assetsManager.addMeshTask(
         "caseta",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "caseta.obj"
       );
       var meshCama = assetsManager.addMeshTask(
         "camara",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "camara.obj"
       );
       var meshMonta = assetsManager.addMeshTask(
         "montana",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "montana.obj"
       );
       var meshInfor = assetsManager.addMeshTask(
         "informatica",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "informa.obj"
       );
       var meshMeta = assetsManager.addMeshTask(
         "fisica",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "metano.obj"
       );
       var meshTecno = assetsManager.addMeshTask(
         "tecnologia",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "engranajes.obj"
       );
       var meshTemplo = assetsManager.addMeshTask(
         "Historia",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "templo.obj"
       );
       var meshEdicion = assetsManager.addMeshTask(
         "Edicion",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "edicion.obj"
       );
       var meshOtros = assetsManager.addMeshTask(
         "otros",
         "",
-        "./models/",
+        `${process.env.PUBLIC_URL}/models/`,
         "pinturas.obj"
       );
       meshVolver.onSuccess = function (task) {
