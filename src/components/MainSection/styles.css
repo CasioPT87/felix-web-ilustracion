@@ -95,3 +95,15 @@
   97%                 {height: var(--image-ilustraciones-size); width:  var(--image-ilustraciones-size)}
   100%                {height: 0; width: 0;}
 }
+
+.video-videos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+}
+
+.video-videos {
+  width: 100%
+}

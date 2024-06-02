@@ -15,6 +15,7 @@ const App = () => {
       <div className="bot-nav">
         <div onClick={() => setLocation("/")}>Portada</div>
         <div onClick={() => setLocation("/informatica")}>informatica</div>
+        <div onClick={() => setLocation("/ilustraciones")}>ilustraciones</div>
         <div onClick={() => setLocation("/biologia")}>biologia</div>
         <div onClick={() => setLocation("/fisicayquimica")}>fisicayquimica</div>
         <div onClick={() => setLocation("/geografiaehistoria")}>
@@ -29,7 +30,10 @@ const App = () => {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/ilustraciones">
-          <MainSection key="ilustraciones" />
+          <MainSection key="ilustraciones" type="images" />
+        </Route>
+        <Route path="/videos">
+          <MainSection key="ilustraciones" type="videos" />
         </Route>
         <Route path="/biologia">
           <ImagesSection key="biologia" folderName="biologia" />
@@ -55,7 +59,7 @@ const App = () => {
         <Route path="/tecnologia">
           <ImagesSection key="tecnologia" folderName="tecnologia" />
         </Route>
-        <Route path="/videos" component={VideosSection} />
+        <Route path="/videos/3d" component={VideosSection} />
 
         {/* Default route in a switch */}
         <Route>Pagina no encontrada</Route>
