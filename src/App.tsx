@@ -59,7 +59,7 @@ const App = () => {
         <Route path="/tecnologia">
           <ImagesSection key="tecnologia" folderName="tecnologia" />
         </Route>
-        <Route path="/videos/3d" component={VideosSection} />
+        <Route path="/lllll/3d" component={VideosSection} />
 
         {/* Default route in a switch */}
         <Route>Pagina no encontrada</Route>
