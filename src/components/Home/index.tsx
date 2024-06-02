@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./styles.css";
 import { images } from '../../helper/imageLoader'
 import './styles.css'

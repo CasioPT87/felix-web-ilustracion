@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, Switch, Route } from "wouter";
 import ImagesSection from "./components/ImagesSection";
+import MainSection from "./components/MainSection";
 import VideosSection from "./components/VideosSection";
 import Home from "./components/Home";
 import NavBottom from "./components/nav-bottom";
@@ -27,6 +28,9 @@ const App = () => {
 
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/ilustraciones">
+          <MainSection key="ilustraciones" />
+        </Route>
         <Route path="/biologia">
           <ImagesSection key="biologia" folderName="biologia" />
         </Route>

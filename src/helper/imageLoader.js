@@ -16,6 +16,7 @@ const geologia = importImages(require.context('../static/geologia', false, /\.(p
 const otros = importImages(require.context('../static/otros', false, /\.(png|jpe?g|svg)$/));
 const tecnologia = importImages(require.context('../static/tecnologia', false, /\.(png|jpe?g|svg)$/));
 const portada = importImages(require.context('../static/portada', false, /\.(png|jpe?g|svg)$/));
+const ilustraciones = importImages(require.context('../static/ilustraciones', false, /\.(png|jpe?g|svg)$/));
 
 
 // Exporting the images as an object
@@ -27,5 +28,6 @@ export const images = {
     geologia,
     otros,
     tecnologia,
-    portada
+    portada,
+    ilustraciones
 };
