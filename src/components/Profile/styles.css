@@ -1,14 +1,13 @@
 .perfil-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px; /* space between columns */
+    display: flex;
 }
 
 .perfil-column {
+    width: 50%;
     line-height: 1.5em;
     font-size: 1.2em;
     height: calc(100vh - 4em);
-    overflow: scroll;
+    overflow: auto;
 
     .perfil-text-wrapper {
         cursor: ns-resize;
@@ -33,7 +32,14 @@
 }
 
 @media (max-width: 800px) {
+    .perfil-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: inherit;
+    }
     .perfil-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 }
