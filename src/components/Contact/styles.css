@@ -1,0 +1,41 @@
+.contact-container {
+    display: flex;
+}
+
+.contact-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    height: calc(100vh - 4em);
+    overflow: auto;
+
+    .contact-text-wrapper {
+        padding: 4em;
+    }
+
+    img {
+        width: 80%; 
+        height: calc(100vh - 10em);  
+        object-fit:contain;    
+    }
+
+    br {
+        margin: 0.5em;
+    }
+}
+
+@media (max-width: 800px) {
+    .contact-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: inherit;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+}

@@ -6,6 +6,7 @@ import VideosSection from "./components/VideosSection";
 import Home from "./components/Home";
 import Profile from "./components/Profile/index";
 import NavBottom from "./components/nav-bottom";
+import Contact from "./components/Contact";
 import "./App.css";
 
 const App = () => {
@@ -36,6 +37,9 @@ const App = () => {
           </Route>
           <Route path="/perfil">
             <Profile />
+          </Route>
+          <Route path="/contacto">
+            <Contact />
           </Route>
 
           {/* Subsecciones */}
