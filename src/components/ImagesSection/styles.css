@@ -8,11 +8,12 @@
 
 .grid-container {
   padding: 2em;
-  display: grid;
+  display: flex;
   width: 70%;
-  gap: 1em;
-  grid-template-columns: repeat(4, 1fr);
-  /* background-color: ; */
+
+  .children-row {
+    width: 25%;
+  }
 }
 
 .children {
@@ -20,6 +21,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin: 1em;
 
   img {
     width: 100%;
