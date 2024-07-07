@@ -48,8 +48,8 @@
   height: 100%;
   cursor: pointer;
   object-fit: contain;
-  padding: 2em;
   box-sizing: border-box;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: brightness(40%);
   backdrop-filter: brightness(40%);
