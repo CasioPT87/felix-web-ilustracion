@@ -1136,7 +1136,7 @@ const NavBottom = ({ goTo }) => {
   }, []);
   return (
     <div id="bottomPanel" className={show ? 'show' : ''}>
-      <button id="toggleButton" onClick={() => setShow(!show)}>NAVEGACIÓN</button>
+      <button id="toggleButton" onClick={() => setShow(!show)}>NAVEGACIÓN 3D</button>
       <canvas id="renderCanvas"></canvas>
     </div>
   );

@@ -1,27 +1,20 @@
 import React from "react";
 import monkey from "../../static/contacto/monkey.jpg";
+import Pill from "../Pill";
 import "./styles.css";
 
-const Contact = () => {
+const Contact = function() {
   return (
-    <div className="contact-container">
-      <div className="contact-column">
-        <img src={monkey} className="monkey" />
-      </div>
-      <div className="contact-column">
-        <div className="contact-text-wrapper">
-          <>
-            Soy un gnomo Y aquí en el bosque, soy feliz<br></br>
-            Bajo un árbol, vivo yo,<br></br>
-            junto a su raíz <br></br>
-            Soy un gnomo<br></br>
-            Y simplemente con mirar <br></br>
-            Todo lo que piensas tú<br></br>
-            podré adivinar<br></br>
-          </>
+    <>
+      <Pill top='6em'><p>Contacto</p></Pill>
+      <div className="contact-container">
+        <div className="contact-column">moreno.felix@gmail.com</div>
+        <div className="contact-column">
+          <img src={monkey} className="monkey" />
         </div>
+        <div className="contact-column">+34 699 86 79 51</div>
       </div>
-    </div>
+    </>
   );
 };
 

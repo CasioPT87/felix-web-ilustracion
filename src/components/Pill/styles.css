@@ -7,11 +7,12 @@
     background-color: black;
     color: white;
     font-size: 1.2em;
-    font-weight: bold;
+    /* font-weight: bold; */
+    text-transform: uppercase;
     border-radius: 10em;
     white-space: nowrap;
     overflow: hidden;
-    height: 3em;
+    height: 1.8em;
     animation-duration: 2s;
     animation-name: pill1;
     animation-fill-mode: forwards;
@@ -20,34 +21,35 @@
   
   @keyframes pill1 {
     0% {
-      left: -200px;
+      left: 0%;
       width: 60px;
       color: black;
-      padding: 0;
+      padding-left: 2em;
+      padding-right: 2em;
     }
     40% {
-      left: 10em;
+      left: calc(50% - 130px - 2em);
       width: 60px;
       color: black;
       padding: 0;
     }
     85% {
-      left: 10em;
-      width: initial;
+      left: calc(50% - 130px - 2em);
+      width: 260px;
       color: black;
       padding-left: 2em;
       padding-right: 2em;
     }
     95% {
-      left: 10em;
-      width: initial;
+      left: calc(50% - 130px - 2em);
+      width: 260px;
       color: black;
       padding-left: 2em;
       padding-right: 2em;
     }
     100% {
-      left: 10em;
-      width: initial;
+      left: calc(50% - 130px - 2em);
+      width: 260px;
       color: white;
       padding-left: 2em;
       padding-right: 2em;
