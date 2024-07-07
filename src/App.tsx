@@ -16,15 +16,17 @@ const App = () => {
     setAnimateOut(true);
     setTimeout(() => {
       window.scrollTo(0, 0);
-      setLocation(path)
+      setLocation(path);
       setAnimateOut(false);
-    }, 2000)
+    }, 2000);
   };
 
   return (
     <>
       <main className={animateOut ? "animate-out" : "animate-in"}>
-        <header>jandermauer</header>
+        <header>
+          Felix Moreno
+        </header>
         <Switch>
           {/* Secciones Principales */}
           <Route path="/" component={Home} />
