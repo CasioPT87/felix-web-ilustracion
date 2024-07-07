@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <>
-      <header>Felix Moreno</header>
+      <header onClick={() => goTo('/')}>Felix Moreno</header>
       <main className={animateOut ? "animate-out" : "animate-in"}>
         <Switch>
           {/* Secciones Principales */}
