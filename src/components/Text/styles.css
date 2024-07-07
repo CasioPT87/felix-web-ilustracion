@@ -1,16 +1,12 @@
 .side-text-column {
-  position: absolute;
-  width: 20%;
-  top: 5em;
-  right: 0;
+  width: 40%;
   padding: 6em;
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 1.5em;
   font-size: 1.2em;
-  background-color: rgb(248, 241, 229);
-  min-height: (100vh - 4em);
+  min-height: (100vh - 4em); */
 
   br {
       margin: 0.5em;
@@ -19,11 +15,11 @@
 
 @media (max-width: 1200px) {
   .side-text-column {
-    padding: 2em;
+    padding: 4em;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .side-text-column {
       display: none;
   }

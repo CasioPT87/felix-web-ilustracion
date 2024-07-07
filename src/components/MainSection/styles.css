@@ -8,6 +8,13 @@
   }
 }
 
+.main-section-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .photo-container-ilustraciones {
   position: absolute;
   width: var(--image-ilustraciones-size);
@@ -115,20 +122,40 @@
   align-items: center;
   top: 0;
   left: 0;
-  width: 100%;
+  margin-left: 30%;
+  width: 30%;
   height: 80vh;
 }
 
+@media (max-width: 1000px) {
+  .gif-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
 .gif-container {
-  width: 40vh; /* Set your desired width */
-  max-width: 600px;
-  height: 40vh; /* Set your desired height */
-  max-height: 600px;
+  width: 40vmin; /* Set your desired width */
+  height: 40vmin; /* Set your desired height */
+  min-width: 40vmin;
   overflow: hidden; /* Hide overflow to keep the circle shape */
   border-radius: 50%; /* Make the container circular */
   display: flex; /* Center the GIF within the container */
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .gif-wrapper {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .gif-container {
+    width: 70vmin; /* Set your desired width */
+    height: 70vmin; /* Set your desired height */
+    min-width: 70vmin;
+  }
 }
 
 /* Style the GIF image */
