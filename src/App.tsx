@@ -23,16 +23,16 @@ const App = () => {
 
   return (
     <>
-      <header onClick={() => goTo('/')}>Felix Moreno</header>
+      <header onClick={() => goTo("/")}>Felix Moreno</header>
       <main className={animateOut ? "animate-out" : "animate-in"}>
         <Switch>
           {/* Secciones Principales */}
           <Route path="/" component={Home} />
           <Route path="/ilustracion">
-            <MainSection key="ilustraciones" type="images" />
+            <MainSection key="ilustraciones" type="images" pillText="Ilustraciones" />
           </Route>
           <Route path="/video">
-            <MainSection key="videos" type="videos" />
+            <MainSection key="videos" type="videos" pillText="Videos" />
           </Route>
           <Route path="/perfil">
             <Profile />
@@ -40,28 +40,53 @@ const App = () => {
 
           {/* Subsecciones */}
           <Route path="/ilustracion/biologia">
-            <ImagesSection key="biologia" folderName="biologia" />
+            <ImagesSection
+              key="biologia"
+              folderName="biologia"
+              pillText="Biologia"
+            />
           </Route>
           <Route path="/ilustracion/informatica">
-            <ImagesSection key="informatica" folderName="informatica" />
+            <ImagesSection
+              key="informatica"
+              folderName="informatica"
+              pillText="Informatica"
+            />
           </Route>
           <Route path="/ilustracion/fisicayquimica">
-            <ImagesSection key="fisicayquimica" folderName="fisicayquimica" />
+            <ImagesSection
+              key="fisicayquimica"
+              folderName="fisicayquimica"
+              pillText="Fisica y Quimica"
+            />
           </Route>
           <Route path="/ilustracion/geografiaehistoria">
             <ImagesSection
               key="geografiaehistoria"
               folderName="geografiaehistoria"
+              pillText="Geografia e Historia"
             />
           </Route>
           <Route path="/ilustracion/geologia">
-            <ImagesSection key="geologia" folderName="geologia" />
+            <ImagesSection
+              key="geologia"
+              folderName="geologia"
+              pillText="Geologia"
+            />
           </Route>
           <Route path="/ilustracion/otros">
-            <ImagesSection key="otros" folderName="otros" />
+            <ImagesSection
+              key="otros"
+              folderName="otros"
+              pillText="Otras ilustraciones"
+            />
           </Route>
           <Route path="/ilustracion/tecnologia">
-            <ImagesSection key="tecnologia" folderName="tecnologia" />
+            <ImagesSection
+              key="tecnologia"
+              folderName="tecnologia"
+              pillText="Tecnologia"
+            />
           </Route>
           <Route path="/video/animacion3d" component={VideosSection} />
 

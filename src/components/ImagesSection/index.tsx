@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./styles.css";
 import { animated, useTrail } from "@react-spring/web";
 import { images } from "../../helper/imageLoader";
 import { Section } from "../types";
+import Pill from '../Pill'
+import "./styles.css";
 
 const NUM_COLUMNS = 3;
 
@@ -11,7 +12,7 @@ const belongsTo = (column: number, index: number): Boolean => {
   return column === index - round * NUM_COLUMNS;
 };
 
-const ImagesSection = ({ folderName }: { folderName: Section }) => {
+const ImagesSection = ({ folderName, pillText }: { folderName: Section, pillText: string }) => {
   const [sectionImages, setSectionImages] = useState([]);
   const [fullScreenImgSelected, setFullScreenImgSelected] = useState(null);
 
@@ -35,6 +36,7 @@ const ImagesSection = ({ folderName }: { folderName: Section }) => {
 
   return (
     <div className="wrapper">
+      <Pill top='6em'><p>{pillText}</p></Pill>
       <div className="grid-container">
         {new Array(NUM_COLUMNS).fill(0).map((each, _index) => (
           <div className="children-row">
