@@ -24,10 +24,12 @@ const Section = ({
         <Pill top="6em">
           <p>{pillText}</p>
         </Pill>
-        <div className="photo-container-ilustraciones">
-          {sortedImages.map((src, index) => (
-            <img key={index} src={src} className="photo-ilustraciones" />
-          ))}
+        <div className="sergio">
+          <div className="photo-container-ilustraciones">
+            {sortedImages.map((src, index) => (
+              <img key={index} src={src} className="photo-ilustraciones" />
+            ))}
+          </div>
         </div>
         <Text section={type} />
       </div>

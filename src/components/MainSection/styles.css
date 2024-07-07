@@ -15,6 +15,13 @@
   align-items: center;
 }
 
+.sergio {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 4em); 
+  left: 0%;
+}
+
 .photo-container-ilustraciones {
   position: absolute;
   width: var(--image-ilustraciones-size);
