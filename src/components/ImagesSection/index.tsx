@@ -27,7 +27,7 @@ const ImagesSection = ({ folderName }: { folderName: Section }) => {
       console.error('Folder not found:', folderName);
       setSectionImages([]);
   }
-}, [folderName, images]);
+}, [folderName]);
 
   if (!sectionImages.length) return null
 
@@ -35,7 +35,7 @@ const ImagesSection = ({ folderName }: { folderName: Section }) => {
     <div className="wrapper">
       <div className="grid-container">
         {trails.map((style, index) => (
-          <animated.div key={index} className={`children ${imageShapeMap[index] ? "horizontal" : "vertical"}`} style={style}>
+          <animated.div key={index} className="children" style={style}>
             <img
               onLoad={(imgObj) => {
                 const target = imgObj.target as HTMLImageElement

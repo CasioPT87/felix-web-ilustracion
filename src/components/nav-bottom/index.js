@@ -144,7 +144,7 @@ const NavBottom = ({ goTo }) => {
           // Load the propeller model
           BABYLON.SceneLoader.ImportMesh(
             "",
-            "models/",
+            `${process.env.PUBLIC_URL}/models/`,
             "helice.obj",
             scene,
             function (meshes) {

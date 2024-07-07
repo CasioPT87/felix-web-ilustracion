@@ -11,7 +11,7 @@
   display: grid;
   width: 70%;
   gap: 1em;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   /* background-color: ; */
 }
 
@@ -26,17 +26,12 @@
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.41);
     -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.41);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.41);
+    min-height: 200px;
+    object-fit: cover;
   }
 
   :hover {
     transition: transform 0.3s ease; /* Animación de transición */
     transform: scale(1.01);
   }
-}
-
-.children.horizontal {
-  grid-column: span 2;
-}
-.children.vertical {
-  grid-column: span 1;
 }

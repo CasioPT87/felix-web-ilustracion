@@ -16,7 +16,7 @@
   border-radius: 50%;
   animation-duration: 10s;
   animation-name: photoIlustracionFrame;
-  animation-iteration-count: infinite;
+  /* animation-iteration-count: infinite; */
   animation-timing-function: linear;
   top: 50%; /* Adjust according to the center point you desire */
   left: 50%; /* Adjust according to the center point you desire */
@@ -93,7 +93,7 @@
   0%                  {height: 0; width: 0;}
   3%                  {height: var(--image-ilustraciones-size); width:  var(--image-ilustraciones-size)}
   97%                 {height: var(--image-ilustraciones-size); width:  var(--image-ilustraciones-size)}
-  100%                {height: 0; width: 0;}
+  /* 100%                {height: 0; width: 0;} */
 }
 
 .video-videos-container {
