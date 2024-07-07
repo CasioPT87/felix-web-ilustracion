@@ -23,10 +23,8 @@ const App = () => {
 
   return (
     <>
+      <header>Felix Moreno</header>
       <main className={animateOut ? "animate-out" : "animate-in"}>
-        <header>
-          Felix Moreno
-        </header>
         <Switch>
           {/* Secciones Principales */}
           <Route path="/" component={Home} />

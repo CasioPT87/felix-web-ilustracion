@@ -1,5 +1,5 @@
 :root {
-  --image-ilustraciones-size: 600px; /* Default font size */
+  --image-ilustraciones-size: 400px; /* Default font size */
 }
 
 @media screen and (max-width: 800px) {
@@ -98,6 +98,7 @@
 
 .video-videos-container {
   display: flex;
+  position: absolute;
   justify-content: center;
   align-items: center;
   height: 80vh;
@@ -106,4 +107,33 @@
 
 .video-videos {
   width: 100%
+}
+
+.gif-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+}
+
+.gif-container {
+  width: 40vh; /* Set your desired width */
+  max-width: 600px;
+  height: 40vh; /* Set your desired height */
+  max-height: 600px;
+  overflow: hidden; /* Hide overflow to keep the circle shape */
+  border-radius: 50%; /* Make the container circular */
+  display: flex; /* Center the GIF within the container */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the GIF image */
+.gif-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container without distortion */
 }

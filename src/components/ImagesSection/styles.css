@@ -49,4 +49,6 @@
   padding: 2em;
   box-sizing: border-box;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: brightness(40%);
+  backdrop-filter: brightness(40%);
 }
