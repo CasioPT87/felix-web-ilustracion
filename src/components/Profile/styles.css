@@ -5,16 +5,34 @@
 }
 
 .perfil-column {
-    background-color: lightgray;
-    padding: 20px;
-    border: 1px solid #ccc;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    height: calc(100vh - 4em);
+    overflow: scroll;
+
+    .perfil-text-wrapper {
+        cursor: ns-resize;
+        padding: 4em;
+    }
 
     img {
-        width: 100%;
+        width: 100%;       
+    }
+
+    img.text-ilustration {
+        padding: 4em 0;
+    }
+
+    img.felix {
+        width: 90%;
+    }
+
+    br {
+        margin: 0.5em;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .perfil-container {
         grid-template-columns: 1fr;
     }
