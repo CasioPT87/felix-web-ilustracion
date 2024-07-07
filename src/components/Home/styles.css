@@ -47,45 +47,93 @@
 }
 
 @keyframes fade1 {
-  0%    {opacity: 0}
-  2.776666666666667% {opacity: 1}
-  13.883333333333335% {opacity: 1}
-  16.66% {opacity: 0}
+  0% {
+    opacity: 0;
+  }
+  2.776666666666667% {
+    opacity: 1;
+  }
+  13.883333333333335% {
+    opacity: 1;
+  }
+  16.66% {
+    opacity: 0;
+  }
 }
- 
-  @keyframes fade2 {
-  16.66%    {opacity: 0}
-  19.436666666666667% {opacity: 1}
-  30.543333333333337% {opacity: 1}
-  33.32% {opacity: 0}
+
+@keyframes fade2 {
+  16.66% {
+    opacity: 0;
+  }
+  19.436666666666667% {
+    opacity: 1;
+  }
+  30.543333333333337% {
+    opacity: 1;
+  }
+  33.32% {
+    opacity: 0;
+  }
 }
- 
-  @keyframes fade3 {
-  33.32%    {opacity: 0}
-  36.096666666666664% {opacity: 1}
-  47.20333333333333% {opacity: 1}
-  49.980000000000004% {opacity: 0}
+
+@keyframes fade3 {
+  33.32% {
+    opacity: 0;
+  }
+  36.096666666666664% {
+    opacity: 1;
+  }
+  47.20333333333333% {
+    opacity: 1;
+  }
+  49.980000000000004% {
+    opacity: 0;
+  }
 }
- 
-  @keyframes fade4 {
-  49.980000000000004%    {opacity: 0}
-  52.75666666666667% {opacity: 1}
-  63.86333333333334% {opacity: 1}
-  66.64% {opacity: 0}
+
+@keyframes fade4 {
+  49.980000000000004% {
+    opacity: 0;
+  }
+  52.75666666666667% {
+    opacity: 1;
+  }
+  63.86333333333334% {
+    opacity: 1;
+  }
+  66.64% {
+    opacity: 0;
+  }
 }
 
 @keyframes fade5 {
-  66.64%    {opacity: 0}
-  69.41666666666667% {opacity: 1}
-  80.52333333333334% {opacity: 1}
-  83.3% {opacity: 0}
+  66.64% {
+    opacity: 0;
+  }
+  69.41666666666667% {
+    opacity: 1;
+  }
+  80.52333333333334% {
+    opacity: 1;
+  }
+  83.3% {
+    opacity: 0;
+  }
 }
- 
-  @keyframes fade6 {
-  83.3%    {opacity: 0}
-  86.07666666666667% {opacity: 1}
-  97.18333333333334% {opacity: 1}
-  99.96% {opacity: 0}
+
+@keyframes fade6 {
+  83.3% {
+    opacity: 0;
+  }
+  86.07666666666667% {
+    opacity: 1;
+  }
+  97.18333333333334% {
+    opacity: 1;
+  }
+  99.96% {
+    opacity: 0;
+  }
 }
 
 /* const getFrames = (iteration) => {
