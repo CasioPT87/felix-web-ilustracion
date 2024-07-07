@@ -32,7 +32,7 @@ const App = () => {
             <MainSection key="ilustraciones" type="images" pillText="Ilustraciones" />
           </Route>
           <Route path="/video">
-            <MainSection key="videos" type="videos" pillText="Videos" />
+            <MainSection key="videos" type="videos" pillText="Animación y edición de vídeo" />
           </Route>
           <Route path="/perfil">
             <Profile />

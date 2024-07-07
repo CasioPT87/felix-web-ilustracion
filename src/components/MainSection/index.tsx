@@ -4,6 +4,7 @@ import { images } from "../../helper/imageLoader";
 import { getSortedPaths } from "../../helper/utils";
 import { MainSection } from "../types";
 import Pill from '../Pill'
+import Text from '../Text'
 import gifPortada from "../../static/videos/videosportada.gif";
 
 const mainSectionImages = Object.values(images.ilustraciones) as any[];
@@ -20,6 +21,7 @@ const Section = ({ type, pillText }: { type: MainSection, pillText: string }): a
           <img key={index} src={src} className="photo-ilustraciones" />
         ))}
       </div>
+      <Text section={type} />
       </>
     );
   } else if (type === "videos") {
@@ -31,6 +33,7 @@ const Section = ({ type, pillText }: { type: MainSection, pillText: string }): a
           <img src={gifPortada} className="videoportada" />
         </div>
       </div>
+      <Text section={type} />
       </>
     );
   }
