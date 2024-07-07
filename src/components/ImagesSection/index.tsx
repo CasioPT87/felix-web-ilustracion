@@ -13,6 +13,7 @@ const belongsTo = (column: number, index: number): Boolean => {
 
 const ImagesSection = ({ folderName }: { folderName: Section }) => {
   const [sectionImages, setSectionImages] = useState([]);
+  const [fullScreenImgSelected, setFullScreenImgSelected] = useState(null);
 
   const trails = useTrail(sectionImages.length, {
     from: { y: 2000 },
@@ -41,13 +42,25 @@ const ImagesSection = ({ folderName }: { folderName: Section }) => {
               if (!belongsTo(_index, index)) return null;
               return (
                 <animated.div key={index} className="children" style={style}>
-                  <img src={sectionImages[index]} />
+                  <img
+                    src={sectionImages[index]}
+                    onClick={() =>
+                      setFullScreenImgSelected(sectionImages[index])
+                    }
+                  />
                 </animated.div>
               );
             })}
           </div>
         ))}
       </div>
+      {fullScreenImgSelected && (
+        <img
+          className="fullScreenImage"
+          src={fullScreenImgSelected}
+          onClick={() => setFullScreenImgSelected(null)}
+        />
+      )}
     </div>
   );
 };

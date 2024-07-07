@@ -34,6 +34,19 @@
 
   :hover {
     transition: transform 0.3s ease; /* Animación de transición */
-    transform: scale(1.01);
+    transform: scale(1.05);
   }
+}
+
+.fullScreenImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  object-fit: contain;
+  padding: 2em;
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
 }
