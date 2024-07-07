@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import * as BABYLON from '@babylonjs/core/Legacy/legacy';
 import '@babylonjs/loaders/OBJ';
-import { useLocation } from "wouter";
 import "./nav-bottom.css";
 
 const NavBottom = ({ goTo }) => {
 
   const [show, setShow] = useState(false)
-  const [location, setLocation] = useLocation()
 
   useEffect(() => {
     // Obtener el canvas
