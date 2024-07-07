@@ -20,7 +20,7 @@ const Section = ({
 }): any => {
   if (type === "images") {
     return (
-      <div className="main-section-container">
+      <div>
         <Pill top="6em">
           <p>{pillText}</p>
         </Pill>
@@ -36,7 +36,7 @@ const Section = ({
     );
   } else if (type === "videos") {
     return (
-      <div className="main-section-container">
+      <>
         <Pill top="6em">
           <p>{pillText}</p>
         </Pill>
@@ -46,7 +46,7 @@ const Section = ({
           </div>
         </div>
         <Text section={type} />
-      </div>
+      </>
     );
   }
   return null;

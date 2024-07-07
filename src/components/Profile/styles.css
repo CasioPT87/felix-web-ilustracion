@@ -3,6 +3,10 @@
 }
 
 .perfil-column {
+    margin-top: 6.5em;
+    display: flex;
+    justify-content: center;
+    align-items: start;
     width: 50%;
     line-height: 1.5em;
     font-size: 1.2em;
@@ -11,7 +15,7 @@
 
     .perfil-text-wrapper {
         cursor: ns-resize;
-        padding: 4em;
+        padding: 0 4em;
     }
 
     img {
@@ -23,7 +27,7 @@
     }
 
     img.felix {
-        width: 90%;
+        width: 80%;
     }
 
     br {

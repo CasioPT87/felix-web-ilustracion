@@ -1,11 +1,13 @@
 import React from "react";
 import books from "../../static/perfil/libros.png";
 import felix from "../../static/perfil/felix.jpg";
+import Pill from '../Pill'
 import "./styles.css";
 
 const Profile = () => {
   return (
     <div className={`perfil-container `}>
+      <Pill top="6em"><p>felix moreno arrastio</p></Pill>
       <div className="perfil-column">
         <img src={felix} className="felix" />
       </div>
