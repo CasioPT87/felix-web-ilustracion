@@ -15,8 +15,16 @@
   align-items: center;
 } */
 
+.photo-container-ilustraciones-wrapper {
+  display: block;
+  position: relative;
+  top: 365px;
+  left: 0;
+  width: 100%;
+}
+
 .photo-container-ilustraciones {
-  position: absolute;
+  position: relative;
   width: var(--image-ilustraciones-size);
   height: var(--image-ilustraciones-size);
   overflow: hidden;

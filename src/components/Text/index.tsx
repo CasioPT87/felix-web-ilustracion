@@ -16,7 +16,7 @@ const Text = ({ section }: { section: string }) => {
         </div>
       )}
       {section === "images" && (
-        <div className="side-text-column small">
+        <div className="side-text-column moved">
           Un factor, creo, determinante para entrar a trabajar en la editorial
           SM fue que, habitualmente, a los editores les resulta difícil explicar
           a los ilustradores los conceptos científicos que deben ser

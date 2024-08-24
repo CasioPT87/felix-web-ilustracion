@@ -1,3 +1,0 @@
-4 columnas de imagenes
-las columnas tienen un width fijo
-darle un min-height a las imagenes para que las que sean mas apaisadas se recorten con object-fit cover

@@ -49,6 +49,7 @@ const ImagesSection = ({ folderName, pillText }: { folderName: Section, pillText
                     onClick={() =>
                       setFullScreenImgSelected(sectionImages[index])
                     }
+                    alt="Felix Moreno"
                   />
                 </animated.div>
               );
@@ -61,6 +62,7 @@ const ImagesSection = ({ folderName, pillText }: { folderName: Section, pillText
           className="fullScreenImage"
           src={fullScreenImgSelected}
           onClick={() => setFullScreenImgSelected(null)}
+          alt="Felix Moreno"
         />
       )}
     </div>
