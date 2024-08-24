@@ -19,6 +19,7 @@
     min-width: 10em;
     cursor: pointer;
     padding: 1em;
+    padding-right: 2em;
     color: black;
     font-size: 20px;
   }
