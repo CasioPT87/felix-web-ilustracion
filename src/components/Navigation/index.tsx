@@ -15,7 +15,7 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
         Mapa
       </p>
       {open && (
-        <ul className="navigation2D__menu">
+        <ul className="navigation2D__menu" onMouseLeave={() => setOpen(false)}>
           <li onClick={(e) => navigateTo(e, '/')}>
             <p>Inicio</p>
           </li>
