@@ -21,7 +21,7 @@ const App = () => {
       console.log(path)
       setLocation(path);
       setAnimateOut(false);
-      if (callback) callback()
+      if (callback && typeof callback === 'function') callback()
     }, 2000);
   };
 
@@ -100,8 +100,9 @@ const App = () => {
               pillText="Tecnologia"
             />
           </Route>
-          <Route path="/video/animacion3d" component={VideosSection} />
-
+          <Route path="/video/animacion3d">
+            <VideosSection pillText="Videos 3D" />
+          </Route>
           <Route>Ops!! lo siento, no es una url valida para este sitio</Route>
         </Switch>
       </main>

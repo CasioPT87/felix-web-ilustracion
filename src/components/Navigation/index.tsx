@@ -51,7 +51,7 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
               <li onClick={(e) => navigateTo(e, '/video')}>
                 <p>Portada</p>
               </li>
-              <li onClick={(e) => navigateTo(e, '/video/3d')}>
+              <li onClick={(e) => navigateTo(e, '/video/animacion3d')}>
                 <p>Videos 3D</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/video/edicion')}>
