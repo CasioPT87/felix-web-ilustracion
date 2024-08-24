@@ -101,7 +101,10 @@ const App = () => {
             />
           </Route>
           <Route path="/video/animacion3d">
-            <VideosSection pillText="Videos 3D" />
+            <VideosSection pillText="Animacion 3D" type='3d' />
+          </Route>
+          <Route path="/video/edicion">
+            <VideosSection pillText="Edicion de Video" type='edicion' />
           </Route>
           <Route>Ops!! lo siento, no es una url valida para este sitio</Route>
         </Switch>
