@@ -1,0 +1,56 @@
+.navigation2D {
+  width: 150px;
+  height: 30px;
+  text-align: right;
+  color: #00468b;
+}
+
+.navigation2D__menu {
+  z-index: 1000;
+  background-color: #e0d9ff;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    text-align: right;
+    min-width: 10em;
+    cursor: pointer;
+    padding: 1em;
+    color: black;
+    font-size: 20px;
+  }
+
+  li:hover {
+    background-color: black;
+    color: white;
+
+    ul {
+      display: block;
+    }
+  }
+}
+
+.navigation2D__menu.level_1 {
+  display: none;
+  top: 0;
+  right: 12em;
+
+  .middle {
+    top: 5em;
+  }
+
+  .bottom {
+    top: 10em;
+  }
+}
+
+.navigation2D__menu.level_1.middle {
+  top: 64px;
+}
+
+.navigation2D__menu.level_1.bottom {
+  top: 128px;
+}

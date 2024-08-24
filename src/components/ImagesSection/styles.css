@@ -53,4 +53,5 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: brightness(40%);
   backdrop-filter: brightness(40%);
+  z-index: 500;
 }

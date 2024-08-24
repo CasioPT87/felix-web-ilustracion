@@ -7,24 +7,32 @@ import Home from "./components/Home";
 import Profile from "./components/Profile/index";
 import NavBottom from "./components/nav-bottom";
 import Contact from "./components/Contact";
+import Navigation from "./components/Navigation";
 import "./App.css";
 
 const App = () => {
   const [location, setLocation] = useLocation();
   const [animateOut, setAnimateOut] = useState(false);
 
-  const goTo = (path: string) => {
+  const goTo = (path: string, callback?: any) => {
     setAnimateOut(true);
     setTimeout(() => {
       window.scrollTo(0, 0);
+      console.log(path)
       setLocation(path);
       setAnimateOut(false);
+      callback()
     }, 2000);
   };
 
   return (
     <>
-      <header onClick={() => goTo("/")}>Felix Moreno</header>
+      <header>
+        <>
+          <p onClick={() => goTo("/")}>Felix Moreno</p>
+          <Navigation goTo={goTo}/>
+        </>
+      </header>
       <main className={animateOut ? "animate-out" : "animate-in"}>
         <Switch>
           {/* Secciones Principales */}

@@ -47,10 +47,16 @@
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   background-color: #e0d9ff;
   padding: 0.8em;
   font-size: 1.6em;
   font-weight: bold;
   cursor: pointer;
   color: darkmagenta;
+
+  p {
+    margin: 0;
+  }
 }
