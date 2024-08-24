@@ -1,0 +1,36 @@
+.infoPill {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 6em;
+    left: -100px;
+    width: 35px;
+    background-color: black;
+    color: white;
+    font-size: 1.2em;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    border-radius: 10em;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 1.8em;
+    animation-duration: 1s;
+    animation-name: infoPill;
+    animation-fill-mode: forwards;
+    animation-delay: 3000ms;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  @keyframes infoPill {
+    0% {
+      left: -100px;
+    }
+    60% {
+      left: -100px;
+    }
+    100% {
+      left: 3em;
+    }
+  }

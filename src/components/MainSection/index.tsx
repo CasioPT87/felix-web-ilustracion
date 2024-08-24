@@ -4,6 +4,7 @@ import { images } from "../../helper/imageLoader";
 import { getSortedPaths } from "../../helper/utils";
 import { MainSection } from "../types";
 import Pill from "../Pill";
+import InfoText from '../InfoText'
 import Text from "../Text";
 import gifPortada from "../../static/videos/videosportada.gif";
 
@@ -24,6 +25,7 @@ const Section = ({
         <Pill top="6em">
           <p>{pillText}</p>
         </Pill>
+        <InfoText text={ <Text section={type} /> }/>
         <div className="photo-container-ilustraciones-wrapper">
           <div className="photo-container-ilustraciones">
             {sortedImages.map((src, index) => (
@@ -31,7 +33,6 @@ const Section = ({
             ))}
           </div>
         </div>
-        <Text section={type} />
       </div>
     );
   } else if (type === "videos") {
@@ -40,12 +41,12 @@ const Section = ({
         <Pill top="6em">
           <p>{pillText}</p>
         </Pill>
+        <InfoText text={ <Text section={type} />}/>
         <div className="gif-wrapper">
           <div className="gif-container">
             <img src={gifPortada} className="videoportada" />
           </div>
         </div>
-        <Text section={type} />
       </>
     );
   }

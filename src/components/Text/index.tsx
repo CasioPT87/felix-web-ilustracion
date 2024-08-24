@@ -5,7 +5,7 @@ const Text = ({ section }: { section: string }) => {
   return (
     <>
       {section === "videos" && (
-        <div className="side-text-column">
+        <div className="info-pill-text">
           Los programas de modelado 3D son herramientas diseñadas tanto para la
           creación de imágenes fijas como para la producción de escenas
           animadas. Por lo tanto, basándome en mi experiencia en modelado 3D, me
@@ -16,7 +16,7 @@ const Text = ({ section }: { section: string }) => {
         </div>
       )}
       {section === "images" && (
-        <div className="side-text-column moved">
+        <div className="info-pill-text">
           Un factor, creo, determinante para entrar a trabajar en la editorial
           SM fue que, habitualmente, a los editores les resulta difícil explicar
           a los ilustradores los conceptos científicos que deben ser

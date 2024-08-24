@@ -21,7 +21,7 @@ const App = () => {
       console.log(path)
       setLocation(path);
       setAnimateOut(false);
-      callback()
+      if (callback) callback()
     }, 2000);
   };
 

@@ -1,24 +1,18 @@
-.side-text-column {
-  padding: 0 20em;
-  margin-top: -4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.info-pill-text {
+  position: absolute;
+  top: 160px;
+  left: 60px;
+  width: 80%;
+  min-width: 500px;
+  max-width: 900px;
+  padding: 50px;
+  font-size: 1.3em;
+  z-index: 300;
+  background-color: black;
+  color: white;
   line-height: 1.5em;
-  font-size: 1.2em;
-  min-height: (100vh - 4em);
 
   br {
       margin: 0.5em;
-  }
-}
-
-.side-text-column.moved {
-  top: 365px;
-}
-
-@media (max-width: 1200px) {
-  .side-text-column {
-    padding: 4em;
   }
 }
