@@ -34,7 +34,7 @@ const NavBottom = ({ goTo }) => {
       camera.attachControl(canvas, true);
 
       //Color del fondo
-      scene.clearColor = new BABYLON.Color4(0.88, 0.85, 1, 1);
+      scene.clearColor = new BABYLON.Color4(0, 0, 0, 1);
 
       // Ground
 

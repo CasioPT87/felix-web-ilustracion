@@ -11,9 +11,7 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
 
   return (
     <>
-      <p className="navigation2D" onMouseOver={() => setOpen(true)} onClick={() => setOpen(!open)}>
-        Mapa
-      </p>
+      <img src={`${process.env.PUBLIC_URL}/burger.png`} className="navigation2D" onMouseOver={() => setOpen(true)} onClick={() => setOpen(!open)} />
       {open && (
         <ul className="navigation2D__menu" onMouseLeave={() => setOpen(false)}>
           <li onClick={(e) => navigateTo(e, '/')}>

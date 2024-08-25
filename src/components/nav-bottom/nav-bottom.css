@@ -12,11 +12,12 @@
   transform: translateY(100%);
 
   button {
-    background-color: var(--ternary);
-    color: var(--color-text-ternary);
-    border: 0px;
+    background-color: black;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--secondary);
+    border-bottom: 0px;
     padding: 20px;
-    border-radius: 0.5em 0.5em;
+    border-radius: 0.5em 0.5em 0 0;
     height: 60px;
     margin-top: -24px;
     font-size: 1.1em;
@@ -31,8 +32,8 @@
 
 #toggleButton {
   position: absolute;
-  top: -30px; /* Posición arriba del panel */
-  right: 20px;
+  top: -36px; /* Posición arriba del panel */
+  right: 4em;
 }
 
 canvas {

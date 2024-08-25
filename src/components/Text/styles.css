@@ -8,9 +8,10 @@
   padding: 50px;
   font-size: 1.3em;
   z-index: 300;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: var(--color-text-primary);
   line-height: 1.5em;
+  border: 1px solid var(--secondary);
 
   br {
       margin: 0.5em;

@@ -1,35 +1,81 @@
 .infoPill {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 6em;
+  left: -100px;
+  width: 35px;
+  background-color: var(--primary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--secondary);
+  font-size: 1.2em;
+  text-transform: uppercase;
+  border-radius: 10em;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 1.8em;
+  animation-duration: 2s;
+  animation-name: infoPill;
+  animation-fill-mode: forwards;
+  animation-delay: 3000ms;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.infoPill__content {
+  position: inherit;
+  top: 3px;
+  animation-duration: 2s;
+  animation-name: infoPillContent;
+  animation-fill-mode: forwards;
+  animation-delay: 3000ms;
+}
+
+@media (max-width: 800px) {
+  .infoPill {
+    display: none;
+  }
+}
+
+@keyframes infoPillContent {
+  0% {
+    top: 3px;
+  }
+  60% {
+    top: 3px;
+  }
+  80% {
+    top: 13px;
+  }
+  100% {
+    top: 3px;
+  }
+}
+
+@keyframes infoPill {
+  0% {
     top: 6em;
+    height: 1.8em;
     left: -100px;
     width: 35px;
-    background-color:var(--quaternary);
-    color: var(--color-text-quaternary);
-    font-size: 1.2em;
-    text-transform: uppercase;
-    border-radius: 10em;
-    white-space: nowrap;
-    overflow: hidden;
+  }
+  60% {
+    top: 6em;
     height: 1.8em;
-    animation-duration: 1s;
-    animation-name: infoPill;
-    animation-fill-mode: forwards;
-    animation-delay: 3000ms;
-    font-weight: bold;
-    cursor: pointer;
+    left: calc(50% - 400px);
+    width: 35px;
   }
-  
-  @keyframes infoPill {
-    0% {
-      left: -100px;
-    }
-    60% {
-      left: -100px;
-    }
-    100% {
-      left: 3em;
-    }
+  80% {
+    top: calc(6em - 10px);
+    height: calc(1.8em + 20px);
+    left: calc(50% - 410px);
+    width: 55px;
   }
+  100% {
+    top: 6em;
+    height: 1.8em;
+    left: calc(50% - 400px);
+    width: 35px;
+  }
+}

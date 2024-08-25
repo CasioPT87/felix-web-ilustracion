@@ -1,13 +1,15 @@
 .navigation2D {
-  width: 150px;
+  position: relative;
+  width: 30px;
   height: 30px;
   text-align: right;
   color: var(--color-text-primary);
+  padding-right: 4em;
 }
 
 .navigation2D__menu {
   z-index: 1000;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   position: absolute;
   top: 45px;
   right: 0;
@@ -19,7 +21,7 @@
     min-width: 10em;
     cursor: pointer;
     padding: 1em;
-    color: var(color-text-secondary);
+    color: var(--color-text-primary);
     font-size: 20px;
 
     p {
@@ -29,7 +31,7 @@
 
   li:hover {
     background-color: black;
-    color: white;
+    color: var(--color-text-secondary);
 
     ul {
       display: block;
@@ -40,7 +42,7 @@
 .navigation2D__menu.level_1 {
   display: none;
   top: 0;
-  right: 12em;
+  right: 279px;
 
   .middle {
     top: 5em;
@@ -55,10 +57,16 @@
   top: 64px;
 
   p {
-    padding-right: 0;
+    padding-right: 2em;
+    width: 200px;
   }
 }
 
 .navigation2D__menu.level_1.bottom {
   top: 128px;
+
+  p {
+    padding-right: 2em;
+    width: 200px;
+  }
 }
