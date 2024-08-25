@@ -11,7 +11,7 @@
     width: 50%;
     line-height: 1.5em;
     font-size: 1.2em;
-    height: calc(100vh - 4em);
+    height: calc(100vh - 15em);
     overflow: auto;
 
     .perfil-text-wrapper {
@@ -40,8 +40,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 90%;
         height: inherit;
+        padding: 0 1em 4em 1em;
+        padding-bottom: 4em;
     }
     .perfil-container {
         flex-direction: column;
