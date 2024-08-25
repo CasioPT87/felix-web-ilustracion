@@ -19,9 +19,12 @@
     min-width: 10em;
     cursor: pointer;
     padding: 1em;
-    padding-right: 2em;
     color: black;
     font-size: 20px;
+
+    p {
+      padding-right: 1em;
+    }
   }
 
   li:hover {
@@ -50,6 +53,10 @@
 
 .navigation2D__menu.level_1.middle {
   top: 64px;
+
+  p {
+    padding-right: 0;
+  }
 }
 
 .navigation2D__menu.level_1.bottom {
