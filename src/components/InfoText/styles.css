@@ -6,10 +6,9 @@
     top: 6em;
     left: -100px;
     width: 35px;
-    background-color: black;
-    color: white;
+    background-color:var(--quaternary);
+    color: var(--color-text-quaternary);
     font-size: 1.2em;
-    /* font-weight: bold; */
     text-transform: uppercase;
     border-radius: 10em;
     white-space: nowrap;

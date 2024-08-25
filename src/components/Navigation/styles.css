@@ -2,12 +2,12 @@
   width: 150px;
   height: 30px;
   text-align: right;
-  color: #00468b;
+  color: var(--color-text-primary);
 }
 
 .navigation2D__menu {
   z-index: 1000;
-  background-color: #e0d9ff;
+  background-color: var(--secondary);
   position: absolute;
   top: 45px;
   right: 0;
@@ -19,7 +19,7 @@
     min-width: 10em;
     cursor: pointer;
     padding: 1em;
-    color: black;
+    color: var(color-text-secondary);
     font-size: 20px;
 
     p {

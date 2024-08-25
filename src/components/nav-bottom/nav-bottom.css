@@ -12,8 +12,8 @@
   transform: translateY(100%);
 
   button {
-    background-color: #e0d9ff;
-    color: white;
+    background-color: var(--ternary);
+    color: var(--color-text-ternary);
     border: 0px;
     padding: 20px;
     border-radius: 0.5em 0.5em;

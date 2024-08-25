@@ -1,5 +1,6 @@
 .perfil-container {
     display: flex;
+    color: var(--color-text-secondary);
 }
 
 .perfil-column {
