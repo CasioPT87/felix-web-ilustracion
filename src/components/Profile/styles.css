@@ -1,6 +1,6 @@
 .perfil-container {
     display: flex;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
 }
 
 .perfil-column {
@@ -16,7 +16,6 @@
 
     .perfil-text-wrapper {
         cursor: ns-resize;
-        padding: 0 4em 8em 4em;
     }
 
     img {

@@ -1,33 +1,16 @@
 .contact-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: var(--color-text-secondary)
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: var(--color-text-primary);
+  font-size: 1.5em;
+  padding-top: 100px;
 
-.contact-column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    height: calc(100vh - 4em);
-    overflow: auto;
-
-    img {
-        width: 50vh;  
-        height: 50vh;  
-        border-radius: 50%; 
-    }
-}
-
-.contact-column:nth-child(1) {
-    width: 35%;
-}
-
-.contact-column:nth-child(2) {
-    width: 30%;
-}
-
-.contact-column:nth-child(3) {
-    width: 35%;
+  img {
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+    padding-top: 50px;
+  }
 }
