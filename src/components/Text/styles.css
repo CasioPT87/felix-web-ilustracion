@@ -1,17 +1,16 @@
 .info-pill-text {
   position: absolute;
-  top: 160px;
-  left: 60px;
-  width: 80%;
+  top: 250px;
+  left: calc(50vw - 450px - 50px);
+  width: 900px;
   min-width: 500px;
-  max-width: 900px;
   padding: 50px;
   font-size: 1.3em;
   z-index: 300;
   background-color: var(--primary);
   color: var(--color-text-primary);
   line-height: 1.5em;
-  border: 1px solid var(--secondary);
+  border: var(--border);
 
   br {
       margin: 0.5em;

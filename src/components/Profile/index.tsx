@@ -1,17 +1,17 @@
 import React from "react";
 import books from "../../static/perfil/libros.png";
 import felix from "../../static/perfil/felix.jpg";
-import Pill from '../Pill'
+import Pill from "../Pill";
 import "./styles.css";
 
 const Profile = () => {
   return (
-    <div className={`perfil-container `}>
-      <Pill top="6em"><p>felix moreno arrastio</p></Pill>
+    <div className="perfil-container">
+      <Pill top="6em">
+        <p>Perfil</p>
+      </Pill>
       <div className="perfil-column">
         <img src={felix} className="felix" />
-      </div>
-      <div className="perfil-column">
         <div className="perfil-text-wrapper">
           <>
             Nací en 1970. Soy licenciado en Ciencias Biológicas por la UAM.{" "}
@@ -31,7 +31,6 @@ const Profile = () => {
             Saber.
           </>
           <img src={books} className="text-ilustration" />
-          <></>
           Eran unos pequeños libros de divulgación que buscaban promover el
           interés por el mundo de la ciencia, las artes y la cultura en los
           alumnos y alumnas de primaria y secundaria. <br></br>

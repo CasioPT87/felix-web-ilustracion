@@ -29,7 +29,7 @@ const App = () => {
     <>
       <header>
         <>
-          <p onClick={() => goTo("/")}>Felix Moreno</p>
+          <p onClick={() => goTo("/")}>Felix Moreno Arrastio</p>
           <Navigation goTo={goTo}/>
         </>
       </header>

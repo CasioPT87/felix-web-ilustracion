@@ -3,13 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 6em;
+  top: 5em;
   left: -100px;
   width: 35px;
   background-color: var(--primary);
   color: var(--color-text-primary);
-  border: 1px solid var(--secondary);
-  font-size: 1.2em;
+  border: var(--border);
+  font-size: 1.4em;
   text-transform: uppercase;
   border-radius: 10em;
   white-space: nowrap;
@@ -55,25 +55,25 @@
 
 @keyframes infoPill {
   0% {
-    top: 6em;
+    top: 5em;
     height: 1.8em;
     left: -100px;
     width: 35px;
   }
   60% {
-    top: 6em;
+    top: 5em;
     height: 1.8em;
     left: calc(50% - 400px);
     width: 35px;
   }
   80% {
-    top: calc(6em - 10px);
+    top: calc(5em - 10px);
     height: calc(1.8em + 20px);
     left: calc(50% - 410px);
     width: 55px;
   }
   100% {
-    top: 6em;
+    top: 5em;
     height: 1.8em;
     left: calc(50% - 400px);
     width: 35px;

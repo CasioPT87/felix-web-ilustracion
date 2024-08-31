@@ -1,33 +1,35 @@
 .perfil-container {
     display: flex;
+    justify-content: center;
     color: var(--color-text-primary);
 }
 
 .perfil-column {
-    margin-top: 6.5em;
     display: flex;
     justify-content: center;
     align-items: start;
-    width: 50%;
     line-height: 1.5em;
     font-size: 1.2em;
-    height: calc(100vh - 15em);
-    overflow: auto;
+    padding-top: 10em;
 
     .perfil-text-wrapper {
+        width: 100%;
+        min-width: 500px;
+        max-width: 900px;
         cursor: ns-resize;
-    }
-
-    img {
-        width: 100%;       
+        padding: 0 5em 10em 5em;
     }
 
     img.text-ilustration {
-        padding: 4em 0;
+        width: 100%;   
+        padding: 2em 0; 
     }
 
     img.felix {
-        width: 80%;
+        width: 100%;
+        min-width: 500px;
+        object-fit: contain;
+        max-width: 900px;
     }
 
     br {
@@ -38,14 +40,20 @@
 @media (max-width: 800px) {
     .perfil-column {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 90%;
         height: inherit;
         padding: 0 1em 4em 1em;
         padding-bottom: 4em;
-    }
-    .perfil-container {
-        flex-direction: column;
+
+        img.felix {
+            padding-top: 8em; 
+        }
+    
+        .perfil-text-wrapper {
+            padding-top: 4em; 
+        }
     }
 }

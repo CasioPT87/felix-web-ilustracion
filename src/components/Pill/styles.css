@@ -7,7 +7,7 @@
     background-color: var(--primary);
     color: var(--color-text-primary);
     font-size: 1.2em;
-    border: 1px solid var(--secondary);
+    border: var(--border);
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 10em;

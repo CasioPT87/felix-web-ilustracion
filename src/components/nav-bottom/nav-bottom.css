@@ -14,7 +14,7 @@
   button {
     background-color: black;
     color: var(--color-text-secondary);
-    border: 1px solid var(--secondary);
+    border: var(--border);
     border-bottom: 0px;
     padding: 20px;
     border-radius: 0.5em 0.5em 0 0;
