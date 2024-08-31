@@ -11,8 +11,8 @@ const Contact = function () {
       </Pill>
       <div className="contact-container">
         <p>moreno.felix@gmail.com</p>
-        <p>+34 699 86 79 51</p>
         <img src={monkey} className="monkey" />
+        <p>+34 699 86 79 51</p>
       </div>
     </>
   );
