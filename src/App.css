@@ -9,8 +9,16 @@ header {
   color: var(--color-text-ternary);
   border-bottom: var(--border);
 
-  p {
+  .header-name {
+    display: flex;
+    align-items: center;
     margin: 0;
     padding-left: 5em;
+    height: 25px;
+
+    img {
+      height: 30px;
+      padding-right: 1em;
+    }
   }
 }

@@ -8,6 +8,7 @@ import Profile from "./components/Profile/index";
 import NavBottom from "./components/nav-bottom";
 import Contact from "./components/Contact";
 import Navigation from "./components/Navigation";
+import monigote from "./static/monigote.png";
 import "./App.css";
 
 const App = () => {
@@ -18,10 +19,10 @@ const App = () => {
     setAnimateOut(true);
     setTimeout(() => {
       window.scrollTo(0, 0);
-      console.log(path)
+      console.log(path);
       setLocation(path);
       setAnimateOut(false);
-      if (callback && typeof callback === 'function') callback()
+      if (callback && typeof callback === "function") callback();
     }, 2000);
   };
 
@@ -29,8 +30,12 @@ const App = () => {
     <>
       <header>
         <>
-          <p onClick={() => goTo("/")}>Felix Moreno Arrastio</p>
-          <Navigation goTo={goTo}/>
+          <div className="header-name">
+            <img className="header-name__img" src={monigote} />
+            <p className="header-name__text" onClick={() => goTo("/")}>Felix Moreno Arrastio</p>
+          </div>
+
+          <Navigation goTo={goTo} />
         </>
       </header>
       <main className={animateOut ? "animate-out" : "animate-in"}>
@@ -38,10 +43,18 @@ const App = () => {
           {/* Secciones Principales */}
           <Route path="/" component={Home} />
           <Route path="/ilustracion">
-            <MainSection key="ilustraciones" type="images" pillText="Ilustraciones" />
+            <MainSection
+              key="ilustraciones"
+              type="images"
+              pillText="Ilustraciones"
+            />
           </Route>
           <Route path="/video">
-            <MainSection key="videos" type="videos" pillText="Animación y edición de vídeo" />
+            <MainSection
+              key="videos"
+              type="videos"
+              pillText="Animación y edición de vídeo"
+            />
           </Route>
           <Route path="/perfil">
             <Profile />
@@ -101,10 +114,10 @@ const App = () => {
             />
           </Route>
           <Route path="/video/animacion3d">
-            <VideosSection pillText="Animacion 3D" type='3d' />
+            <VideosSection pillText="Animacion 3D" type="3d" />
           </Route>
           <Route path="/video/edicion">
-            <VideosSection pillText="Edicion de Video" type='edicion' />
+            <VideosSection pillText="Edicion de Video" type="edicion" />
           </Route>
           <Route>Ops!! lo siento, no es una url valida para este sitio</Route>
         </Switch>
