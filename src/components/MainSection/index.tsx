@@ -6,7 +6,7 @@ import { MainSection } from "../types";
 import Pill from "../Pill";
 import InfoText from '../InfoText'
 import Text from "../Text";
-import gifPortada from "../../static/videos/videosportada.gif";
+import gifPortada from "../../static/videos/seccionVideosFondo.gif";
 
 const mainSectionImages = Object.values(images.ilustraciones) as any[];
 
