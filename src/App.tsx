@@ -31,8 +31,8 @@ const App = () => {
       <header>
         <>
           <div className="header-name">
-            <img className="header-name__img" src={monigote} />
-            <p className="header-name__text" onClick={() => goTo("/")}>Felix Moreno Arrastio</p>
+            <img src={monigote} />
+            <p onClick={() => goTo("/")}>Felix Moreno Arrastio</p>
           </div>
 
           <Navigation goTo={goTo} />
