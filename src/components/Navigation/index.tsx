@@ -13,7 +13,7 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
     <>
       <img src={`${process.env.PUBLIC_URL}/burger.png`} className="navigation2D" onMouseOver={() => setOpen(true)} onClick={() => setOpen(!open)} />
       {open && (
-        <ul className="navigation2D__menu" onMouseLeave={() => setOpen(false)}>
+        <ul className="navigation2D__menu" onMouseLeave={() => setOpen(true)}>
           <li onClick={(e) => navigateTo(e, '/')}>
             <p>Inicio</p>
           </li>

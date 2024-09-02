@@ -11,21 +11,21 @@
   z-index: 1000;
   background-color: var(--primary);
   position: absolute;
-  top: 45px;
+  top: 40px;
   right: 0;
   list-style-type: none;
   padding: 0;
 
   li {
     text-align: right;
-    min-width: 10em;
+    width: 10em;
     cursor: pointer;
-    padding: 1em;
+    padding: 16px;
     color: var(--color-text-primary);
     font-size: 20px;
 
     p {
-      padding-right: 1em;
+      padding-right: 16px;
     }
   }
 
@@ -35,6 +35,7 @@
 
     ul {
       display: block;
+      position: absolute;
     }
   }
 }
@@ -42,31 +43,20 @@
 .navigation2D__menu.level_1 {
   display: none;
   top: 0;
-  right: 279px;
+  right: 232px;
+  text-align: center;
 
-  .middle {
-    top: 5em;
-  }
-
-  .bottom {
-    top: 10em;
-  }
+  p {
+    margin-left: 10px;
+    width: 200px;
+    text-align: left;
+   }
 }
 
 .navigation2D__menu.level_1.middle {
-  top: 64px;
-
-  p {
-    padding-right: 2em;
-    width: 200px;
-  }
+  top: 96px;
 }
 
 .navigation2D__menu.level_1.bottom {
-  top: 128px;
-
-  p {
-    padding-right: 2em;
-    width: 200px;
-  }
+  top: 191px;
 }
