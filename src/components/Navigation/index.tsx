@@ -26,9 +26,6 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
               <li onClick={(e) => navigateTo(e, '/ilustracion/tecnologia')}>
                 <p>Tecnologia</p>
               </li>
-              <li onClick={(e) => navigateTo(e, '/ilustracion/otros')}>
-                <p>Otras ilustraciones</p>
-              </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/informatica')}>
                 <p>Informatica</p>
               </li>
@@ -40,6 +37,12 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
               </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/biologia')}>
                 <p>Biologia</p>
+              </li>
+              <li onClick={(e) => navigateTo(e, '/ilustracion/fisicayquimica')}>
+                <p>Fisica y Quimica</p>
+              </li>
+              <li onClick={(e) => navigateTo(e, '/ilustracion/otros')}>
+                <p>Otras ilustraciones</p>
               </li>
             </ul>
           </li>

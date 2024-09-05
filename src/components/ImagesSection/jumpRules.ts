@@ -13,17 +13,24 @@ const jumpRules: JumpRules = {
     { imageIndex: 8, belongsToColumn: 0 },
     { imageIndex: 12, belongsToColumn: 1 },
   ],
-  informatica: [
-    { imageIndex: 0, belongsToColumn: 2 }],
+  informatica: [{ imageIndex: 0, belongsToColumn: 2 }],
   biologia: [
     { imageIndex: 0, belongsToColumn: 1 },
     { imageIndex: 3, belongsToColumn: 1 },
-    { imageIndex: 4, belongsToColumn: 2 }
+    { imageIndex: 4, belongsToColumn: 2 },
   ],
-  fisicayquimica: [],
-  geografiaehistoria: [],
-  geologia: [],
-  otros: [],
+  fisicayquimica: [
+    { imageIndex: 4, belongsToColumn: 0 },
+    { imageIndex: 7, belongsToColumn: 2 },
+  ],
+  geografiaehistoria: [{ imageIndex: 6, belongsToColumn: 2 }],
+  geologia: [
+    { imageIndex: 1, belongsToColumn: 0 },
+    { imageIndex: 4, belongsToColumn: 2 },
+    { imageIndex: 7, belongsToColumn: 2 },
+  ],
+  otros: [
+    { imageIndex: 0, belongsToColumn: 1 }],
   portada: [],
 };
 
