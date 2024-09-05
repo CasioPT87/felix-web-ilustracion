@@ -3,13 +3,24 @@ import { animated, useTrail } from "@react-spring/web";
 import { images } from "../../helper/imageLoader";
 import { Section } from "../types";
 import Pill from '../Pill'
+import jumpRules, { JumpRulesSubject, JumpRules } from "./jumpRules";
 import "./styles.css";
 
 const NUM_COLUMNS = 3;
 
-const belongsTo = (column: number, index: number): Boolean => {
-  const round = Math.floor(index / NUM_COLUMNS);
-  return column === index - round * NUM_COLUMNS;
+const belongsToColumn = (imageIndex: number, jumpRulesSubject: JumpRulesSubject): number => {
+  const round = Math.floor(imageIndex / NUM_COLUMNS);
+  const imageColumn = imageIndex - round * NUM_COLUMNS;
+  const exceptionRule = jumpRulesSubject.find(rule => rule.imageIndex === imageIndex)
+
+  if (exceptionRule) {
+    return exceptionRule.belongsToColumn
+  } 
+    return imageColumn
+};
+
+const shouldRender = (belongsToColumn: number, column: number): Boolean => {
+  return belongsToColumn === column
 };
 
 const ImagesSection = ({ folderName, pillText }: { folderName: Section, pillText: string }) => {
@@ -38,16 +49,16 @@ const ImagesSection = ({ folderName, pillText }: { folderName: Section, pillText
     <div className="wrapper">
       <Pill top='6em'><p>{pillText}</p></Pill>
       <div className="grid-container">
-        {new Array(NUM_COLUMNS).fill(0).map((each, _index) => (
+        {new Array(NUM_COLUMNS).fill(0).map((each, indexColumn) => (
           <div className="children-row">
-            {trails.map((style, index) => {
-              if (!belongsTo(_index, index)) return null;
+            {trails.map((style, indexImage) => {
+              if (!shouldRender(belongsToColumn(indexImage, jumpRules[folderName]), indexColumn)) return null;
               return (
-                <animated.div key={index} className="children" style={style}>
+                <animated.div key={indexImage} className="children" style={style}>
                   <img
-                    src={sectionImages[index]}
+                    src={sectionImages[indexImage]}
                     onClick={() =>
-                      setFullScreenImgSelected(sectionImages[index])
+                      setFullScreenImgSelected(sectionImages[indexImage])
                     }
                     alt="Felix Moreno ilustracion"
                   />
