@@ -1,0 +1,14 @@
+
+
+// todo
+
+- en los videos poner para empezar una portadilla del minuto y seg que felix que diga de cada uno
+- el menu, mas pequeno
+- que en la portada aparezcan los textos secuencialmente
+- anadir imagen que felix te va a mandar
+- subir las imagenes de cuentos (otros)
+- en la portada, los textos, en la izquierda "ilustacion" y "edicion", y quitamos lo d su nombre y dejamos dos y dos
+- poner camaleon que te manda felix en el header y quitar la imagen del duende ese
+- poner tildes
+- deployar en felixmoreno.es -compra el dominio-
+

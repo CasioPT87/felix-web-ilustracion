@@ -28,7 +28,7 @@ const VideosSection = ({
               </p>
               <video className="video-videos" controls preload="auto">
                 <source
-                  src={`${process.env.PUBLIC_URL}/assets/videos/video_largo.mp4`}
+                  src={`${process.env.PUBLIC_URL}/assets/videos/video_largo.mp4#t=10`}
                   type="video/mp4"
                 />
                 <p>Lo sentimos, tu navegador no soporta videos</p>
@@ -49,7 +49,7 @@ const VideosSection = ({
                 </p>
                 <video className="video-videos" controls preload="auto">
                   <source
-                    src={`${process.env.PUBLIC_URL}/assets/videos/edicionDeVideo.mp4`}
+                    src={`${process.env.PUBLIC_URL}/assets/videos/edicionDeVideo.mp4#t=10`}
                     type="video/mp4"
                   />
                   <p>Lo sentimos, tu navegador no soporta videos</p>
@@ -69,7 +69,7 @@ const VideosSection = ({
                 </p>
                 <video className="video-videos" controls preload="auto">
                   <source
-                    src={`${process.env.PUBLIC_URL}/assets/videos/felicitacion2020.mp4`}
+                    src={`${process.env.PUBLIC_URL}/assets/videos/felicitacion2020.mp4#t=10`}
                     type="video/mp4"
                   />
                   <p>Lo sentimos, tu navegador no soporta videos</p>
@@ -87,7 +87,7 @@ const VideosSection = ({
                 </p>
                 <video className="video-videos" controls preload="auto">
                   <source
-                    src={`${process.env.PUBLIC_URL}/assets/videos/videosMusica.mp4`}
+                    src={`${process.env.PUBLIC_URL}/assets/videos/videosMusica.mp4#t=10`}
                     type="video/mp4"
                   />
                   <p>Lo sentimos, tu navegador no soporta videos</p>
