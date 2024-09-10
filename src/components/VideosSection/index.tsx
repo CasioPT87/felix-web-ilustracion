@@ -30,7 +30,7 @@ const VideosSection = ({
         <div className="video-videos-wrapper">
           {type === "3d" && (
             <>
-              <h3>Animacion 3D</h3>
+              <h3>Animación 3D</h3>
               <p>
                 Entre 2013 y 2017, realicé numerosos vídeos mediante modelado 3D
                 para la editorial SM. El trabajo consistió principalmente en
@@ -50,7 +50,7 @@ const VideosSection = ({
           {type === "edicion" && (
             <>
               <div>
-                <h3>Edicion de video</h3>
+                <h3>Edición de video</h3>
                 <p>
                   Desde 2018, he colaborado con Santillana en la edición y
                   montaje de multitud de vídeos. En algunos casos, he incluido
@@ -69,7 +69,7 @@ const VideosSection = ({
               </div>
 
               <div>
-                <h3>Felicitacion</h3>
+                <h3>Felicitación</h3>
                 <p>
                   Durante este periodo, Santillana me encargó la realización de
                   las cortinillas de entrada de los vídeos. Son más de 60
@@ -89,7 +89,7 @@ const VideosSection = ({
               </div>
 
               <div>
-                <h3>Video de Musica</h3>
+                <h3>Vídeo de Música</h3>
                 <p>
                   Aunque la mayoría de los vídeos que he editado corresponden a
                   las asignaturas de biología, geología y física, también he

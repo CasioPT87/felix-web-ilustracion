@@ -4,7 +4,6 @@ import "./styles.css";
 const Navigation2D = ({ goTo }: { goTo: any }) => {
   const [open, setOpen] = useState(false);
   function navigateTo(e: any, path: string) {
-    console.log('navigate!!!')
     e.stopPropagation()
     goTo(path, () => setOpen(false))
   }
@@ -24,22 +23,22 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
                 <p>Portada</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/tecnologia')}>
-                <p>Tecnologia</p>
+                <p>Tecnología</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/informatica')}>
-                <p>Informatica</p>
+                <p>Informática</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/geografiaehistoria')}>
-                <p>Geografia e Historia</p>
+                <p>Geografía e Historia</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/geologia')}>
-                <p>Geologia</p>
+                <p>Geología</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/biologia')}>
-                <p>Biologia</p>
+                <p>Biología</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/fisicayquimica')}>
-                <p>Fisica y Quimica</p>
+                <p>Física y Química</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/otros')}>
                 <p>Otras ilustraciones</p>
@@ -47,16 +46,16 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
             </ul>
           </li>
           <li>
-            <p>Videos</p>
+            <p>Vídeos</p>
             <ul className="navigation2D__menu level_1 bottom">
               <li onClick={(e) => navigateTo(e, '/video')}>
                 <p>Portada</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/video/animacion3d')}>
-                <p>Videos 3D</p>
+                <p>Vídeos 3D</p>
               </li>
               <li onClick={(e) => navigateTo(e, '/video/edicion')}>
-                <p>Edicion de Video</p>
+                <p>Edición de Vídeo</p>
               </li>
             </ul>
           </li>

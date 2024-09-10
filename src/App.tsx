@@ -68,35 +68,35 @@ const App = () => {
             <ImagesSection
               key="biologia"
               folderName="biologia"
-              pillText="Biologia"
+              pillText="Biología"
             />
           </Route>
           <Route path="/ilustracion/informatica">
             <ImagesSection
               key="informatica"
               folderName="informatica"
-              pillText="Informatica"
+              pillText="Informática"
             />
           </Route>
           <Route path="/ilustracion/fisicayquimica">
             <ImagesSection
               key="fisicayquimica"
               folderName="fisicayquimica"
-              pillText="Fisica y Quimica"
+              pillText="Física y Química"
             />
           </Route>
           <Route path="/ilustracion/geografiaehistoria">
             <ImagesSection
               key="geografiaehistoria"
               folderName="geografiaehistoria"
-              pillText="Geografia e Historia"
+              pillText="Geografía e Historia"
             />
           </Route>
           <Route path="/ilustracion/geologia">
             <ImagesSection
               key="geologia"
               folderName="geologia"
-              pillText="Geologia"
+              pillText="Geología"
             />
           </Route>
           <Route path="/ilustracion/otros">
@@ -110,14 +110,14 @@ const App = () => {
             <ImagesSection
               key="tecnologia"
               folderName="tecnologia"
-              pillText="Tecnologia"
+              pillText="Tecnología"
             />
           </Route>
           <Route path="/video/animacion3d">
-            <VideosSection pillText="Animacion 3D" type="3d" />
+            <VideosSection pillText="Animación 3D" type="3d" />
           </Route>
           <Route path="/video/edicion">
-            <VideosSection pillText="Edicion de Video" type="edicion" />
+            <VideosSection pillText="Edición de Vídeo" type="edicion" />
           </Route>
           <Route>Ops!! lo siento, no es una url valida para este sitio</Route>
         </Switch>
