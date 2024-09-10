@@ -2,6 +2,18 @@ import React from "react";
 import Pill from "../Pill";
 import "./styles.css";
 
+// we reset the videos when playing for the first time
+const elements = Object.values(document.getElementsByClassName("video-videos"));
+elements.forEach((el: any) =>
+  el.addEventListener(
+    "play",
+    () => {
+      el.currentTime = 0;
+    },
+    { once: true }
+  )
+);
+
 const VideosSection = ({
   pillText,
   type,
@@ -28,7 +40,7 @@ const VideosSection = ({
               </p>
               <video className="video-videos" controls preload="auto">
                 <source
-                  src={`${process.env.PUBLIC_URL}/assets/videos/video_largo.mp4#t=10`}
+                  src={`${process.env.PUBLIC_URL}/assets/videos/video_largo.mp4`}
                   type="video/mp4"
                 />
                 <p>Lo sentimos, tu navegador no soporta videos</p>
