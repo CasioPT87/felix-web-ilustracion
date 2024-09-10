@@ -12,7 +12,8 @@ const Home = () => {
         <p>Felix Moreno Arrastio</p>
       </Pill>
       <ul className="text left">
-        <li>Felix Moreno Arrastio</li>
+        <li className="text__first">Ilustracion</li>
+        <li className="text__second">Edicion</li>
       </ul>
       <div className="photo-container">
         {imagesPortada.map((src, index) => (
@@ -20,10 +21,8 @@ const Home = () => {
         ))}
       </div>
       <ul className="text right">
-        <li>Ilustracion</li>
-        <li>Edicion</li>
-        <li>Animacion</li>
-        <li>Edicion de video</li>
+        <li className="text__third">Animacion</li>
+        <li className="text__fourth">Edicion de video</li>
       </ul>
     </div>
   );
