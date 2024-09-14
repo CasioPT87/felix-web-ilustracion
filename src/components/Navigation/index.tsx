@@ -17,6 +17,20 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
             <p>Inicio</p>
           </li>
           <li>
+            <p>Vídeos</p>
+            <ul className="navigation2D__menu level_1 bottom">
+              <li onClick={(e) => navigateTo(e, '/video')}>
+                <p>Portada</p>
+              </li>
+              <li onClick={(e) => navigateTo(e, '/video/animacion3d')}>
+                <p>Vídeos 3D</p>
+              </li>
+              <li onClick={(e) => navigateTo(e, '/video/edicion')}>
+                <p>Edición de Vídeo</p>
+              </li>
+            </ul>
+          </li>
+          <li>
             <p>Ilustraciones</p>
             <ul className="navigation2D__menu level_1 middle">
               <li onClick={(e) => navigateTo(e, '/ilustracion')}>
@@ -42,20 +56,6 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
               </li>
               <li onClick={(e) => navigateTo(e, '/ilustracion/otros')}>
                 <p>Otras ilustraciones</p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <p>Vídeos</p>
-            <ul className="navigation2D__menu level_1 bottom">
-              <li onClick={(e) => navigateTo(e, '/video')}>
-                <p>Portada</p>
-              </li>
-              <li onClick={(e) => navigateTo(e, '/video/animacion3d')}>
-                <p>Vídeos 3D</p>
-              </li>
-              <li onClick={(e) => navigateTo(e, '/video/edicion')}>
-                <p>Edición de Vídeo</p>
               </li>
             </ul>
           </li>
