@@ -29,7 +29,9 @@ const jumpRules: JumpRules = {
     { imageIndex: 4, belongsToColumn: 2 },
     { imageIndex: 7, belongsToColumn: 2 },
   ],
-  otros: [],
+  otros: [
+    { imageIndex: 0, belongsToColumn: 2 },
+  ],
   portada: [],
 };
 

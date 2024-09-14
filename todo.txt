@@ -3,7 +3,7 @@
 // todo
 
 - en los videos poner para empezar una portadilla del minuto y seg que felix que diga de cada uno XX
-- el menu, mas pequeno y arreglar
+- el menu, mas pequeno y arreglar XX
 - subir las imagenes de cuentos (otros) XX
 - en la portada, los textos, en la izquierda "ilustacion" y "edicion", y quitamos lo d su nombre y dejamos dos y dos XX
 - poner camaleon que te manda felix en el header y quitar la imagen del duende ese
