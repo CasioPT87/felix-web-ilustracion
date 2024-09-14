@@ -19,7 +19,6 @@ const App = () => {
     setAnimateOut(true);
     setTimeout(() => {
       window.scrollTo(0, 0);
-      console.log(path);
       setLocation(path);
       setAnimateOut(false);
       if (callback && typeof callback === "function") callback();

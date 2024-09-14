@@ -228,6 +228,7 @@ const NavBottom = ({ goTo }) => {
         `${process.env.PUBLIC_URL}/models/`,
         "volver.obj"
       );
+
       var meshVolver2 = assetsManager.addMeshTask(
         "volver2",
         "",
@@ -1127,6 +1128,23 @@ const NavBottom = ({ goTo }) => {
       camera.animations.push(animCamPosition);
 
       scene.beginAnimation(camera, 0, 100, false);
+
+      // felix aqui esta lo del on hover
+      scene.onPointerObservable.add(function (pointerInfo) {
+        switch (pointerInfo.type) {
+            case BABYLON.PointerEventTypes.POINTERMOVE:
+                var pickedMesh = pointerInfo.pickInfo.pickedMesh;
+                if (pickedMesh) {
+                    console.log("Hovering over mesh:", pickedMesh.name);
+                    // Example: Change color when hovering over the mesh
+                    pickedMesh.material.diffuseColor = new BABYLON.Color3(1, 0, 0); // Red on hover
+                } else {
+                    // Handle case when no mesh is hovered
+                    console.log("Not hovering over any mesh");
+                }
+                break;
+        }
+    });
     }
 
     // the canvas/window resize event handler
