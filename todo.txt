@@ -7,6 +7,6 @@
 - subir las imagenes de cuentos (otros) XX
 - en la portada, los textos, en la izquierda "ilustacion" y "edicion", y quitamos lo d su nombre y dejamos dos y dos XX
 - poner camaleon que te manda felix en el header y quitar la imagen del duende ese
-- poner tildes
+- poner tildes XX
 - deployar en felixmoreno.es -compra el dominio-
 

@@ -1,31 +1,33 @@
+
 .navigation2D {
-  position: relative;
-  width: 30px;
-  height: 30px;
+  position: absolute;
+  right: 0;
+  width: calc(3 * var(--menu-rythm));
+  height: calc(3 * var(--menu-rythm));
   text-align: right;
   color: var(--color-text-primary);
-  padding-right: 4em;
+  padding-right: calc(4.6 * var(--menu-rythm));;
 }
 
 .navigation2D__menu {
   z-index: 1000;
   background-color: var(--primary);
   position: absolute;
-  top: 40px;
+  top: 38px;
   right: 0;
   list-style-type: none;
   padding: 0;
 
   li {
     text-align: right;
-    width: 200px;
+    width: calc(20 * var(--menu-rythm));
     cursor: pointer;
-    padding: 16px;
+    padding: calc(1.6 * var(--menu-rythm));
     color: var(--color-text-primary);
-    font-size: 20px;
+    font-size: calc(2 * var(--menu-rythm));
 
     p {
-      padding-right: 16px;
+      padding-right: calc(1.6 * var(--menu-rythm));
     }
   }
 
@@ -43,22 +45,22 @@
 .navigation2D__menu.level_1 {
   display: none;
   top: 0;
-  right: 232px;
+  right: calc(23.2 * var(--menu-rythm));
   text-align: center;
 
   p {
-    margin-left: 10px;
-    width: 200px;
+    margin-left: calc(0 * var(--menu-rythm));
+    width: calc(20 * var(--menu-rythm));
     text-align: left;
   }
 }
 
 .navigation2D__menu.level_1.middle {
-  top: 96px;
+  top: calc(9.5 * var(--menu-rythm));
 }
 
 .navigation2D__menu.level_1.bottom {
-  top: 191px;
+  top: calc(19.0 * var(--menu-rythm));
 }
 
 @media (max-width: 500px) {
