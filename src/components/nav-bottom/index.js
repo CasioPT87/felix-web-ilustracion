@@ -5,7 +5,7 @@ import "./nav-bottom.css";
 
 const texts = {
   volver: "Volver",
-  telefono: "Teléfono",
+  telefono: "Contacto",
   perfil: "Perfil",
   ilustracion: "Ilustración",
   inicio: "Inicio",

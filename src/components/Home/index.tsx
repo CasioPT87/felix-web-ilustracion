@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="photo-container-wrapper">
       <Pill top="6em">
-        <p>Felix Moreno Arrastio</p>
+        <p>Félix Moreno Arrastio</p>
       </Pill>
       <ul className="text left">
         <li className="text__first">Ilustración</li>

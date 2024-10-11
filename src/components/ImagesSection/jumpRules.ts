@@ -21,7 +21,7 @@ const jumpRules: JumpRules = {
   ],
   fisicayquimica: [
     { imageIndex: 4, belongsToColumn: 0 },
-    { imageIndex: 7, belongsToColumn: 2 },
+    { imageIndex: 7, belongsToColumn: 2 }, 
   ],
   geografiaehistoria: [{ imageIndex: 6, belongsToColumn: 2 }],
   geologia: [

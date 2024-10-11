@@ -1,15 +1,15 @@
 :root {
-  --primary: #e8e2e9;
-  --secondary: #1b2e06;
-  --backgroud: #fff;
-  --backgroud-dark-light: #e8e2e9;
-  --color-text-primary: #06092e;
-  --color-text-primary-light: #444444;
+  --primary: #dfdaff;
+  --secondary: #4a4a4a;
+  --backgroud: #ffffff;
+  --backgroud-dark-light: #dfdaff;
+  --color-text-primary: #27213e;
+  --color-text-primary-light: #4e4567;
   --color-text-secondary: #fff;
+  --color-text-ternary: #8779bd;
   --border: 2px solid #8779bd;
   --menu-rythm: 8px;
 }
-
 
 body {
   margin: 0;

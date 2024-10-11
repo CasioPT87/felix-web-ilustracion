@@ -31,7 +31,7 @@ const App = () => {
         <>
           <div className="header-name">
             <img src={monigote} />
-            <p onClick={() => goTo("/")}>Felix Moreno Arrastio</p>
+            <p onClick={() => goTo("/")}>Félix Moreno Arrastio</p>
           </div>
 
           <Navigation goTo={goTo} />
