@@ -42,3 +42,37 @@ canvas {
   height: 100%;
   padding: auto;
 }
+
+.nav3d-disclaimer {
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 28%;
+  left: calc(50% - 100px);
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  border-radius: 1em;
+  border: 1px solid white;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+
+.nav3d-disclaimer__close {
+  color: black;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  background: white;
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,11 +1,28 @@
 import React, { useEffect, useState } from "react";
-import * as BABYLON from '@babylonjs/core/Legacy/legacy';
-import '@babylonjs/loaders/OBJ';
+import * as BABYLON from "@babylonjs/core/Legacy/legacy";
+import "@babylonjs/loaders/OBJ";
 import "./nav-bottom.css";
 
-const NavBottom = ({ goTo }) => {
+const texts = {
+  volver: "Volver",
+  telefono: "Teléfono",
+  perfil: "Perfil",
+  ilustracion: "Ilustración",
+  inicio: "Inicio",
+  video: "Video",
+  edicion_de_video: "Edición de video",
+  biologia: "Biología",
+  geologia: "Geología",
+  fisica_y_quimica: "Física y química",
+  geografia_e_historia: "Geografía e historia",
+  informatica: "Informática",
+  tecnologia: "Tecnología",
+  otros_proyectos: "Otros proyectos"
+};
 
-  const [show, setShow] = useState(false)
+const NavBottom = ({ goTo }) => {
+  const [show, setShow] = useState(false);
+  const [showDisclaimer, setShowDisclaimer] = useState(true);
 
   useEffect(() => {
     // Obtener el canvas
@@ -94,6 +111,7 @@ const NavBottom = ({ goTo }) => {
         scene,
         function (meshes) {
           var airplane = meshes[0];
+          airplane.name = "videos 3D";
           airplane.scaling = new BABYLON.Vector3(0.08, 0.08, 0.08);
           airplane.position = new BABYLON.Vector3(-36, 0, -40);
           airplane.rotate(BABYLON.Axis.Y, 1, BABYLON.Space.LOCAL);
@@ -104,7 +122,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/video/animacion3d") // esto es el video de 4 minutos
+                goTo("/video/animacion3d"); // esto es el video de 4 minutos
               }
             )
           );
@@ -147,6 +165,7 @@ const NavBottom = ({ goTo }) => {
             scene,
             function (meshes) {
               var propeller = meshes[0];
+              propeller.name = "videos 3D";
               propeller.position = new BABYLON.Vector3(0, -0.5, 48.5);
               propeller.parent = airplane;
               propeller.material = material;
@@ -316,6 +335,7 @@ const NavBottom = ({ goTo }) => {
       );
       meshVolver.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.volver;
           // Hacer algo con el primer objeto cargado
           mesh.position = new BABYLON.Vector3(-40, 0, 32);
           mesh.scaling = new BABYLON.Vector3(0.2, 0.2, 0.2);
@@ -352,7 +372,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/")
+                goTo("/");
                 moveCameraSmoothly(
                   camera,
                   //disco.position,
@@ -369,6 +389,7 @@ const NavBottom = ({ goTo }) => {
 
       meshVolver2.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.volver;
           // Hacer algo con el primer objeto cargado
           mesh.position = new BABYLON.Vector3(-34, 0, -26);
           mesh.scaling = new BABYLON.Vector3(0.2, 0.2, 0.2);
@@ -406,7 +427,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/")
+                goTo("/");
                 moveCameraSmoothly(
                   camera,
                   //disco.position,
@@ -421,11 +442,12 @@ const NavBottom = ({ goTo }) => {
 
       meshTelefono.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.telefono;
           // Hacer algo con el segundo objeto cargado
           mesh.position = new BABYLON.Vector3(2, 0, -1);
           mesh.scaling = new BABYLON.Vector3(0.26, 0.26, 0.26);
           mesh.rotate(BABYLON.Axis.Y, 0.8, BABYLON.Space.LOCAL);
-     
+
           //material
           const material = new BABYLON.StandardMaterial("micro", scene);
           material.diffuseColor = new BABYLON.Color3(0.9, 0.88, 1);
@@ -455,7 +477,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/contacto")
+                goTo("/contacto");
               }
             )
           );
@@ -464,7 +486,8 @@ const NavBottom = ({ goTo }) => {
 
       meshCurro.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
-             // Hacer algo con el tercer objeto cargado
+          mesh.name = texts.perfil;
+          // Hacer algo con el tercer objeto cargado
           mesh.position = new BABYLON.Vector3(26, 1, 7);
           mesh.scaling = new BABYLON.Vector3(-0.06, 0.06, 0.06);
 
@@ -498,7 +521,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/perfil")
+                goTo("/perfil");
               }
             )
           );
@@ -506,6 +529,7 @@ const NavBottom = ({ goTo }) => {
       };
       meshCaba.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.ilustracion;
           //material
           const material = new BABYLON.StandardMaterial("micro", scene);
           material.diffuseColor = new BABYLON.Color3(0.9, 0.88, 1);
@@ -545,7 +569,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/ilustracion")
+                goTo("/ilustracion");
                 // Mover la cámara para enfocar la esfera con transición suave
                 moveCameraSmoothly(
                   camera,
@@ -559,6 +583,7 @@ const NavBottom = ({ goTo }) => {
       };
       meshCaseta.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.inicio;
           //material
           const material = new BABYLON.StandardMaterial("micro", scene);
           material.diffuseColor = new BABYLON.Color3(0.9, 0.88, 1);
@@ -599,7 +624,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/")
+                goTo("/");
               }
             )
           );
@@ -607,6 +632,7 @@ const NavBottom = ({ goTo }) => {
       };
       meshCama.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.video;
           // Hacer algo con el cuarto objeto cargado
           mesh.position = new BABYLON.Vector3(12, -0.7, -11);
           mesh.scaling = new BABYLON.Vector3(0.06, 0.06, 0.06);
@@ -642,7 +668,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/video")
+                goTo("/video");
                 // Mover la cámara para enfocar la esfera con transición suave
                 moveCameraSmoothly(
                   camera,
@@ -657,6 +683,7 @@ const NavBottom = ({ goTo }) => {
 
       meshEdicion.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.edicion_de_video;
           // Hacer algo con el cuarto objeto cargado
           mesh.position = new BABYLON.Vector3(-43, 0, -19);
           mesh.scaling = new BABYLON.Vector3(-0.04, 0.04, 0.04);
@@ -694,7 +721,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo('/video/edicion') // no me los ha mandado aun
+                goTo("/video/edicion"); // no me los ha mandado aun
               }
             )
           );
@@ -702,6 +729,7 @@ const NavBottom = ({ goTo }) => {
       };
       meshMicro.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.biologia;
           // Hacer algo con el primer objeto cargado
           mesh.position = new BABYLON.Vector3(-35, -1, 40);
           mesh.scaling = new BABYLON.Vector3(0.05, 0.05, 0.05);
@@ -734,7 +762,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/ilustracion/biologia")
+                goTo("/ilustracion/biologia");
               }
             )
           );
@@ -742,6 +770,7 @@ const NavBottom = ({ goTo }) => {
       };
       meshMonta.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.geologia;
           // Hacer algo con el cuarto objeto cargado
           mesh.position = new BABYLON.Vector3(-40, 0.8, 51);
           mesh.scaling = new BABYLON.Vector3(0.08, 0.16, 0.08);
@@ -777,7 +806,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/ilustracion/geologia")
+                goTo("/ilustracion/geologia");
               }
             )
           );
@@ -785,6 +814,7 @@ const NavBottom = ({ goTo }) => {
       };
       meshMeta.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.fisica_y_quimica;
           // Hacer algo con el cuarto objeto cargado
           mesh.position = new BABYLON.Vector3(-51, 1.5, 54);
           mesh.scaling = new BABYLON.Vector3(0.2, 0.2, 0.2);
@@ -820,7 +850,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/ilustracion/fisicayquimica")
+                goTo("/ilustracion/fisicayquimica");
               }
             )
           );
@@ -828,6 +858,7 @@ const NavBottom = ({ goTo }) => {
       };
       meshTemplo.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.geografia_e_historia;
           // Hacer algo con el cuarto objeto cargado
           mesh.position = new BABYLON.Vector3(-53, 0.5, 35);
           mesh.scaling = new BABYLON.Vector3(0.04, 0.04, 0.04);
@@ -864,7 +895,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/ilustracion/geografiaehistoria")
+                goTo("/ilustracion/geografiaehistoria");
               }
             )
           );
@@ -872,6 +903,7 @@ const NavBottom = ({ goTo }) => {
       };
       meshInfor.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.informatica;
           // Hacer algo con el cuarto objeto cargado
           mesh.position = new BABYLON.Vector3(-67, 0.8, 36);
           mesh.scaling = new BABYLON.Vector3(0.015, 0.015, 0.015);
@@ -907,7 +939,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/ilustracion/informatica")
+                goTo("/ilustracion/informatica");
               }
             )
           );
@@ -916,6 +948,7 @@ const NavBottom = ({ goTo }) => {
 
       meshTecno.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.tecnologia;
           // Hacer algo con el cuarto objeto cargado
           mesh.position = new BABYLON.Vector3(-56, 1.5, 25);
           mesh.scaling = new BABYLON.Vector3(0.015, 0.015, 0.03);
@@ -951,7 +984,7 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/ilustracion/tecnologia")
+                goTo("/ilustracion/tecnologia");
               }
             )
           );
@@ -959,6 +992,7 @@ const NavBottom = ({ goTo }) => {
       };
       meshOtros.onSuccess = function (task) {
         task.loadedMeshes.forEach(function (mesh) {
+          mesh.name = texts.otros_proyectos;
           // Hacer algo con el cuarto objeto cargado
           mesh.position = new BABYLON.Vector3(-47, -1, 26);
           mesh.scaling = new BABYLON.Vector3(-0.04, 0.04, 0.04);
@@ -994,12 +1028,43 @@ const NavBottom = ({ goTo }) => {
             new BABYLON.ExecuteCodeAction(
               BABYLON.ActionManager.OnPickTrigger,
               function () {
-                goTo("/ilustracion/otros")
+                goTo("/ilustracion/otros");
               }
             )
           );
         });
       };
+
+      var hoverDiv = document.createElement("div");
+      hoverDiv.style.position = "absolute";
+      hoverDiv.style.background = "rgba(89, 89, 89, 1)";
+      hoverDiv.style.color = "white";
+      hoverDiv.style.padding = "10px";
+      hoverDiv.style.borderRadius = "5px";
+      hoverDiv.style.fontSize = "16px";
+      hoverDiv.style.display = "none"; // Inicialmente oculto
+      document.body.appendChild(hoverDiv);
+
+      scene.onPointerObservable.add(function (pointerInfo) {
+        // console.log(pointerInfo)
+        switch (pointerInfo.type) {
+          case BABYLON.PointerEventTypes.POINTERMOVE:
+            var pickedMesh = pointerInfo.pickInfo.pickedMesh;
+            if (pickedMesh) {
+              var palabra = pickedMesh.name;
+            
+              // Mostrar el div con la palabra correspondiente
+              hoverDiv.style.display = "block";
+              hoverDiv.innerHTML = palabra;
+              hoverDiv.style.left = pointerInfo.event.clientX + 10 + "px"; // Ajusta la posición junto al puntero
+              hoverDiv.style.top = pointerInfo.event.clientY + 10 + "px";
+            } else {
+              // Ocultar el div cuando no se esté sobre ningún mesh
+              hoverDiv.style.display = "none";
+            }
+            break;
+        }
+      });
 
       // Cargar los objetos
       assetsManager.load();
@@ -1128,33 +1193,32 @@ const NavBottom = ({ goTo }) => {
       camera.animations.push(animCamPosition);
 
       scene.beginAnimation(camera, 0, 100, false);
-
-      // felix aqui esta lo del on hover
-      scene.onPointerObservable.add(function (pointerInfo) {
-        switch (pointerInfo.type) {
-            case BABYLON.PointerEventTypes.POINTERMOVE:
-                var pickedMesh = pointerInfo.pickInfo.pickedMesh;
-                if (pickedMesh) {
-                    console.log("Hovering over mesh:", pickedMesh.name);
-                    // Example: Change color when hovering over the mesh
-                    pickedMesh.material.diffuseColor = new BABYLON.Color3(1, 0, 0); // Red on hover
-                } else {
-                    // Handle case when no mesh is hovered
-                    console.log("Not hovering over any mesh");
-                }
-                break;
-        }
-    });
     }
 
     // the canvas/window resize event handler
-    window.addEventListener('resize', function(){
-        engine.resize();
+    window.addEventListener("resize", function () {
+      engine.resize();
     });
   }, []);
+
   return (
-    <div id="bottomPanel" className={show ? 'show' : ''}>
-      <button id="toggleButton" onClick={() => setShow(!show)}>NAVEGACIÓN 3D</button>
+    <div id="bottomPanel" className={show ? "show" : ""} onMouseLeave={() => setShow(false)}>
+      <button id="toggleButton" onClick={() => setShow(!show)}>
+        NAVEGACIÓN 3D
+      </button>
+      <div
+        style={{ display: showDisclaimer ? "block" : "none" }}
+        className="nav3d-disclaimer"
+      >
+        <div
+          className="nav3d-disclaimer__close"
+          onClick={() => setShowDisclaimer(false)}
+        >
+          X
+        </div>
+        Haz clic sobre el disco para girar y pulsa sobre los iconos para
+        seleccionar
+      </div>
       <canvas id="renderCanvas"></canvas>
     </div>
   );
