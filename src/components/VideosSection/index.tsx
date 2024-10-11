@@ -1,18 +1,9 @@
 import React from "react";
 import Pill from "../Pill";
+import { images } from '../../helper/imageLoader'
 import "./styles.css";
 
-// we reset the videos when playing for the first time
-const elements = Object.values(document.getElementsByClassName("video-videos"));
-elements.forEach((el: any) =>
-  el.addEventListener(
-    "play",
-    () => {
-      el.currentTime = 0;
-    },
-    { once: true }
-  )
-);
+const _images: any = images
 
 const VideosSection = ({
   pillText,
@@ -38,7 +29,7 @@ const VideosSection = ({
                 montaje y la transición entre escenas. Este vídeo recopila
                 algunos fragmentos de estas animaciones.
               </p>
-              <video className="video-videos" controls preload="auto">
+              <video className="video-videos" controls preload="auto" poster={_images.videosPortada['video3d.png']}>
                 <source
                   src={`${process.env.PUBLIC_URL}/assets/videos/video_largo.mp4`}
                   type="video/mp4"
@@ -59,9 +50,9 @@ const VideosSection = ({
                   preparar esquemas, añadir rotulaciones y realizar animación
                   convencional.
                 </p>
-                <video className="video-videos" controls preload="auto">
+                <video className="video-videos" controls preload="auto" poster={_images.videosPortada['video1.png']}>
                   <source
-                    src={`${process.env.PUBLIC_URL}/assets/videos/edicionDeVideo.mp4#t=10`}
+                    src={`${process.env.PUBLIC_URL}/assets/videos/edicionDeVideo.mp4`}
                     type="video/mp4"
                   />
                   <p>Lo sentimos, tu navegador no soporta videos</p>
@@ -79,9 +70,9 @@ const VideosSection = ({
                   de que Isaac Newton nació el 25 de diciembre de 1642, según el
                   calendario juliano.
                 </p>
-                <video className="video-videos" controls preload="auto">
+                <video className="video-videos" controls preload="auto" poster={_images.videosPortada['video2.png']}>
                   <source
-                    src={`${process.env.PUBLIC_URL}/assets/videos/felicitacion2020.mp4#t=10`}
+                    src={`${process.env.PUBLIC_URL}/assets/videos/felicitacion2020.mp4`}
                     type="video/mp4"
                   />
                   <p>Lo sentimos, tu navegador no soporta videos</p>
@@ -97,9 +88,9 @@ const VideosSection = ({
                   vídeos a los que tengo un especial cariño, ya que consistían
                   en animar imágenes de otros ilustradores.
                 </p>
-                <video className="video-videos" controls preload="auto">
+                <video className="video-videos" controls preload="auto"  poster={_images.videosPortada['video3.png']}>
                   <source
-                    src={`${process.env.PUBLIC_URL}/assets/videos/videosMusica.mp4#t=10`}
+                    src={`${process.env.PUBLIC_URL}/assets/videos/videosMusica.mp4`}
                     type="video/mp4"
                   />
                   <p>Lo sentimos, tu navegador no soporta videos</p>

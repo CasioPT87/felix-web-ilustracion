@@ -17,6 +17,7 @@ const otros = importImages(require.context('../static/otros', false, /\.(png|jpe
 const tecnologia = importImages(require.context('../static/tecnologia', false, /\.(png|jpe?g|svg)$/));
 const portada = importImages(require.context('../static/portada', false, /\.(png|jpe?g|svg)$/));
 const ilustraciones = importImages(require.context('../static/ilustraciones', false, /\.(png|jpe?g|svg)$/));
+const videosPortada = importImages(require.context('../static/videosPortada', false, /\.(png|jpe?g|svg)$/));
 
 
 // Exporting the images as an object
@@ -29,5 +30,6 @@ export const images = {
     otros,
     tecnologia,
     portada,
-    ilustraciones
+    ilustraciones,
+    videosPortada
 };
