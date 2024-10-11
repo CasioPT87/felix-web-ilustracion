@@ -1037,7 +1037,7 @@ const NavBottom = ({ goTo }) => {
 
       var hoverDiv = document.createElement("div");
       hoverDiv.style.position = "absolute";
-      hoverDiv.style.background = "rgba(89, 89, 89, 1)";
+      hoverDiv.style.background = "rgba(3, 3, 3, 1)";
       hoverDiv.style.color = "white";
       hoverDiv.style.padding = "10px";
       hoverDiv.style.borderRadius = "5px";
