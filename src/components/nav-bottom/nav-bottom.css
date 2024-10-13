@@ -32,7 +32,7 @@
 
 #toggleButton {
   position: absolute;
-  top: -36px; /* Posición arriba del panel */
+  top: -34px; /* Posición arriba del panel */
   right: 4em;
 }
 
@@ -75,10 +75,4 @@ canvas {
   border-radius: 2em;
   font-weight: bold;
   cursor: pointer;
-}
-
-@media (max-width: 1400px) {
-  .leches-fritas {
-    background-color: orange;
-  }
 }

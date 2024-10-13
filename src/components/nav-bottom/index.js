@@ -1036,7 +1036,6 @@ const NavBottom = ({ goTo }) => {
       };
 
       var hoverDiv = document.createElement("div");
-      hoverDiv.className = 'leches-fritas';
       hoverDiv.style.position = "absolute";
       hoverDiv.style.background = "rgba(3, 3, 3, 1)";
       hoverDiv.style.color = "white";
