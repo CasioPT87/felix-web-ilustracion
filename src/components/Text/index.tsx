@@ -3,7 +3,7 @@ import "./styles.css";
 
 const Text = ({ section }: { section: string }) => {
   return (
-    <>
+    <div className="text-wrapper">
       {section === "videos" && (
         <div className="info-pill-text">
           Los programas de modelado 3D son herramientas diseñadas tanto para la
@@ -32,7 +32,7 @@ const Text = ({ section }: { section: string }) => {
           la estructura en la página o el estilo de la ilustración.
         </div>
       )}
-    </>
+    </div>
   );
 };
 

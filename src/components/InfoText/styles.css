@@ -34,7 +34,13 @@
 
 @media (max-width: 800px) {
   .infoPill {
-    display: none;
+    left: 5px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .infoPill {
+    display: none !important;
   }
 }
 
