@@ -26,7 +26,7 @@
 
     img.felix {
         width: 100%;
-        min-width: 500px;
+        min-width: 200px;
         object-fit: contain;
         max-width: 900px;
     }
