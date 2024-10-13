@@ -6,9 +6,13 @@ const InfoPill = ({ text }: { text?: ReactElement }) => {
 
   return (
     <>
-      <div className="infoPill" onClick={() => setOpen(!open)}>
-        <span className="infoPill__content">+</span>
+      <div className="infoPill-wrapper">
+        <div className="infoPill" onClick={() => setOpen(!open)}>
+          <span className="infoPill__content">+</span>
+        </div>
+        <div className="infoPill-text">Info</div>
       </div>
+
       {open && text}
     </>
   );
