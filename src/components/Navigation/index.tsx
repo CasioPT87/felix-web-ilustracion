@@ -8,16 +8,11 @@ const Navigation2D = ({ goTo }: { goTo: any }) => {
     goTo(path, () => setOpen(false));
   }
 
-  window.onclick = () => {
-    setOpen(false)
-  }
-
   return (
     <>
       <img
         src={`${process.env.PUBLIC_URL}/burger.png`}
         className="navigation2D"
-        onMouseOver={() => setOpen(true)}
         onClick={() => setOpen(!open)}
       />
       {open && (
