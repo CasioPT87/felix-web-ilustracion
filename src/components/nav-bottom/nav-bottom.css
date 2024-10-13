@@ -76,3 +76,9 @@ canvas {
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (max-width: 1400px) {
+  .leches-fritas {
+    background-color: orange;
+  }
+}

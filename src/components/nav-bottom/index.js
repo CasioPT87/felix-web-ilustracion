@@ -17,7 +17,7 @@ const texts = {
   geografia_e_historia: "Geografía e historia",
   informatica: "Informática",
   tecnologia: "Tecnología",
-  otros_proyectos: "Otros proyectos"
+  otros_proyectos: "Otros proyectos",
 };
 
 const NavBottom = ({ goTo }) => {
@@ -1036,6 +1036,7 @@ const NavBottom = ({ goTo }) => {
       };
 
       var hoverDiv = document.createElement("div");
+      hoverDiv.className = 'leches-fritas';
       hoverDiv.style.position = "absolute";
       hoverDiv.style.background = "rgba(3, 3, 3, 1)";
       hoverDiv.style.color = "white";
@@ -1046,16 +1047,18 @@ const NavBottom = ({ goTo }) => {
       document.body.appendChild(hoverDiv);
 
       scene.onPointerObservable.add(function (pointerInfo) {
-        // console.log(pointerInfo)
+
+        if (window.innerWidth < 1300) return // para que no salga en dispositivos moviles
+
         switch (pointerInfo.type) {
           case BABYLON.PointerEventTypes.POINTERMOVE:
+          case BABYLON.PointerEventTypes.POINTERDOWN:
             var pickedMesh = pointerInfo.pickInfo.pickedMesh;
             if (pickedMesh) {
-              var palabra = pickedMesh.name;
-            
+
               // Mostrar el div con la palabra correspondiente
               hoverDiv.style.display = "block";
-              hoverDiv.innerHTML = palabra;
+              hoverDiv.innerHTML = pickedMesh.name;
               hoverDiv.style.left = pointerInfo.event.clientX + 10 + "px"; // Ajusta la posición junto al puntero
               hoverDiv.style.top = pointerInfo.event.clientY + 10 + "px";
             } else {
@@ -1202,7 +1205,11 @@ const NavBottom = ({ goTo }) => {
   }, []);
 
   return (
-    <div id="bottomPanel" className={show ? "show" : ""} onMouseLeave={() => setShow(false)}>
+    <div
+      id="bottomPanel"
+      className={show ? "show" : ""}
+      onMouseLeave={() => setShow(false)}
+    >
       <button id="toggleButton" onClick={() => setShow(!show)}>
         NAVEGACIÓN 3D
       </button>
